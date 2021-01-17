@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-    /************************************************** ZADANIE 1 ***************************************************/
-    /************ POLISH DESCRIPTION: Program przeliczajcy wielkość kąta wyrażoną w stopniach na radiany ************/
+    /********************************************************* ZADANIE 1 **********************************************************/
+    /******************* POLISH DESCRIPTION: Program przeliczajcy wielkość kąta wyrażoną w stopniach na radiany *******************/
     /*
         Formula for converting degrees to radians:
         n(degrees) = n*pi/180 
@@ -28,12 +28,24 @@ int main()
             notNumberBool = false;
         }
     }  
-    cout << "The radian measure of given angle equals: " << degreeAngle*3.14/180 << endl << endl;
+    cout << "The radian measure of given angle equals: " << degreeAngle*3.14/180 << endl;
 
-    /************************************************** ZADANIE 2 ***************************************************/
-    /*************************** POLISH DESCRIPTION: Program obliczający objętość stożka ***************************/
+    /********************************************************* ZADANIE 2 **********************************************************/
+    /********************************** POLISH DESCRIPTION: Program obliczający objętość stożka ***********************************/
 
-    cout << "Ex.2 Work in progress, thanks for your patience" <<endl;
+    cout << "\nEx.2 Program finding the volume of a cone" <<endl;
+    float H = 0; // height of a cone
+    float r = 0; // radius of a cone
+    cout << "Insert the height of a cone: " <<endl;
+    cin >> H;
+    cout << "Insert the radius of a cone: " <<endl;
+    cin >> r;
+    cout << "The volume of a cone equals: " << r*r*H*3.14/3;
+    
+    /********************************************************* ZADANIE 3 **********************************************************/
+    /** POLISH DESCRIPTION: Program obliczający średnią arytmetyczną, sumę odwrotności i sprawdzający, czy suma jest nieparzysta **/
+
+    cout << "\nEx.3 Work in progress, thanks for your patience" <<endl;
 
     return 0;
 
