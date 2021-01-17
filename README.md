@@ -1,2 +1,2 @@
 # Lessons
-My solutions to some simple exercises including task description in polish.
+My solutions to some simple exercises including task descriptions in polish.
