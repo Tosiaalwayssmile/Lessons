@@ -19,7 +19,7 @@ int main()
     float degreeAngle = 0;
     while(notNumberBool)
     {
-        cout << "Insert angle in degrees: "; 
+        cout << "Insert angle in degrees: ______\b\b\b\b\b\b"; 
         cin >> degreeAngleString;
         if( degreeAngleString.find_first_not_of("1234567890.-") != string::npos ) 
         {
@@ -39,9 +39,9 @@ int main()
     cout << "Ex.2 Program finding the volume of a cone" << endl;
     float H = 0; // height of a cone
     float r = 0; // radius of a cone
-    cout << "Insert the height of a cone: ";
+    cout << "Insert the height of a cone: ______\b\b\b\b\b\b";
     cin >> H;
-    cout << "Insert the radius of a cone: ";
+    cout << "Insert the radius of a cone: ______\b\b\b\b\b\b";
     cin >> r;
     cout << "The volume of a cone equals: " << r*r*H*3.14/3 << endl << endl;
 
@@ -51,11 +51,11 @@ int main()
     cout << "Ex.3 Count arithmetic average, reciprocal sum and check if sum is odd" << endl;
     int a = 0, b = 0, c = 0;
     string parity = "odd";
-    cout << "Insert the first integer number: ";
+    cout << "Insert the first integer number: ______\b\b\b\b\b\b";
     cin >> a;
-    cout << "Insert the second integer number: ";
+    cout << "Insert the second integer number: ______\b\b\b\b\b\b";
     cin >> b;
-    cout << "Insert the third integer number: ";
+    cout << "Insert the third integer number: ______\b\b\b\b\b\b";
     cin >> c;
     cout << "\nThe arithemtic average equals: " << (a + b + c) / 3. << endl;  // 3. so the fractional part is not discarded
     cout << "The reciprocal sum equals: " << 1./a + 1./b + 1./c << endl;
@@ -68,11 +68,11 @@ int main()
     
     a = 0, b = 0, c = 0;
     cout << "\nEx.4 Solve quadratic equation: a^2 + bx + c = 0 or linear equation bx + c = 0" << endl;
-    cout << "Insert a: ";
+    cout << "Insert a: ______\b\b\b\b\b\b";
     cin >> a;
-    cout << "Insert b: ";
+    cout << "Insert b: ______\b\b\b\b\b\b";
     cin >> b;
-    cout << "Insert c: ";
+    cout << "Insert c: ______\b\b\b\b\b\b";
     cin >> c;
     float root0 = 0, root1 = 0, root2 = 0;
     if (a != 0)
