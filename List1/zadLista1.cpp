@@ -57,7 +57,7 @@ int main()
     cin >> b;
     cout << "Insert the third integer number: ";
     cin >> c;
-    cout << "\nThe arithemtic average equals: " << (a + b + c) / 3 << endl;
+    cout << "\nThe arithemtic average equals: " << (a + b + c) / 3. << endl;  // 3. so the fractional part is not discarded
     cout << "The reciprocal sum equals: " << 1./a + 1./b + 1./c << endl;
     if ((a+b+c) % 2 == 0)
         parity = "even";
@@ -92,7 +92,7 @@ int main()
         }
         else
         {
-            cout << "There are no roots of given  equation." << endl;
+            cout << "There are no roots of given equation." << endl;
         }
     }
     else 
