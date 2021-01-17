@@ -36,12 +36,12 @@ int main()
     cout << "\nEx.2 Program finding the volume of a cone" <<endl;
     float H = 0; // height of a cone
     float r = 0; // radius of a cone
-    cout << "Insert the height of a cone: " <<endl;
+    cout << "Insert the height of a cone: ";
     cin >> H;
-    cout << "Insert the radius of a cone: " <<endl;
+    cout << "Insert the radius of a cone: ";
     cin >> r;
     cout << "The volume of a cone equals: " << r*r*H*3.14/3;
-    
+
     /********************************************************* ZADANIE 3 **********************************************************/
     /** POLISH DESCRIPTION: Program obliczający średnią arytmetyczną, sumę odwrotności i sprawdzający, czy suma jest nieparzysta **/
 
