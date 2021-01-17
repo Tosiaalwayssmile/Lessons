@@ -1,6 +1,5 @@
 #include <iostream>
-#include <ctype.h> //isdigit
-#include <sstream> //stringstream
+
 using namespace std;
 
 int main()
