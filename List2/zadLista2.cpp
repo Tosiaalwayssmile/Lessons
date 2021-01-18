@@ -3,99 +3,117 @@
 
 using namespace std;
 
-int inputValidation(std::string type)
+string inputValidation(std::string type)
 {
-    if (type == "int" || type == "integer") 
+    string input = "null";
+    bool flaga = 0;
+    while (!flaga)
     {
-        int number = 0;
-        cin >> number;
-        cout << "Hi" << endl;;
-        return number;
+        std::cin >> input;
+        if (type == "int" || type == "integer") 
+        {
+            if (isdigit(input[0]))
+            {
+                flaga = 1;
+                std::cout << "Noice, you entered a valid value" << endl;;
+            }
+            else
+            {
+                std::cout << "Error. Invalid value, re-enter: ";
+            }
+        }
+        else if (type == "float") 
+        {
+            if (isdigit(input[0]))
+            {
+                flaga = 1;
+                std::cout << "Good job, you entered a valid value" << endl;;
+            }
+            else
+            {
+                std::cout << "Error. Invalid value, re-enter: " << endl;
+            }
+        }
+        else
+            std::cout << "Error in code, check function parameter when calling function" << endl;
     }
-    else if (type == "float") 
-    {
-        float number = 0;
-        return number;
-    }
+    return input;
 }
 
 int main()
 {
-//enum inputType {integerT, floatT, stringT};
-//inputType type = integerT; // type is being used to validate input
 /********************************************************* ZADANIE 1 **********************************************************/
 /**************** POLISH DESCRIPTION: Program, który wczytuje liczbę rzeczywistą i oblicza z niej pierwiastek. ****************/
 /********************************** Działanie powtarzane jest dopóki nie zostanie wczytane 0. *********************************/
 
-cout << "Program finding square root of a given integer number. To quit insert \'0\'." << endl;
-/************** Version with do .. while instead od while *************************
-int number = 0;
-do
-{   
-    cout << "Insert number: ";
-    cin >> number;
-    cout << "The square root of " +  std::to_string(number) + " is " << sqrt(number) << endl;
-} while (number != 0);
-*/
+std::cout << "Program finding square root of a given integer number. To quit insert \'0\'." << endl;
 int number = 1;
 while (number != 0)
 {  
-    cout << "Insert number: ";
-    number = inputValidation("integer");
-    cout << "The square root of " +  std::to_string(number) + " is " << sqrt(number) << endl;
+    std::cout << "Insert number: ";
+    number = stoi(inputValidation("integer"));
+    std::cout << "The square root of " +  std::to_string(number) + " is " << sqrt(number) << endl;
 } 
 
 /********************************************************* ZADANIE 2 **********************************************************/
 /**************** POLISH DESCRIPTION: Program, który wczytuje dwie liczby rzeczywiste i działanie jakie ma być na nich wykonane. ****************/
 /******************************** Wykonać odpowiednie działanie i wyświetlić jego wynik. Użyć instrukcji switch. ********************************/
-cout << "*************************************************************************************" << endl;
-cout << "\nBasic calculator. First enter 2 integer numbers and then select an operation." << endl;
+std::cout << "*************************************************************************************" << endl;
+std::cout << "Basic calculator. First enter 2 integer numbers and then select an operation." << endl;
 int number1 = 0, number2 = 0, operation = 0;
 char stop = 'y';
 do{
-    cout << "*************************************************************************************" << endl;
-    cout << "Insert first number: ";
-    cin >> number1;
-    cout << "Insert second number: ";
-    cin >> number2;
-    cout << "Press \'1\' to add numbers\n"
+    std::cout << "*************************************************************************************" << endl;
+    std::cout << "Insert first number: ";
+    number1 = stoi(inputValidation("integer"));
+    std::cout << "Insert second number: ";
+    number2 = stoi(inputValidation("integer"));
+    std::cout << "Press \'1\' to add numbers\n"
             "Press \'2\' to subtract\n"
             "Press \'3\' to multiply\n" 
             "Press \'4\' to divide" << endl;
-    cout << "Choose operation type (1-4): ";
-    cin >> operation;
+    std::cout << "Choose operation type (1-4): ";
+    operation = stoi(inputValidation("integer"));
     switch(operation)
     {
       case 1:
       {
-          cout << "The sum of given numbers equals: " << number1 + number2 << endl;
+          std::cout << "The sum of given numbers equals: " << number1 + number2 << endl;
           break;
     }
       case 2:
       {
-          cout << "The difference of given numbers equals: " << number1 - number2 << endl;
+          std::cout << "The difference of given numbers equals: " << number1 - number2 << endl;
           break;
       }
       case 3:
       {
-          cout << "The multiplication of given numbers equals: " << number1 * number2 << endl;
+          std::cout << "The multiplication of given numbers equals: " << number1 * number2 << endl;
           break;
       }
       case 4:
       {
-          cout << "The division of given numbers equals: " << (float)number1 / number2 << endl;
+          std::cout << "The division of given numbers equals: " << (float)number1 / number2 << endl;
+          break;
+      }
+      default:
+      {
+          cin.clear();  //no idea if needed
+          cin.sync();
+          std::cout << "Invalid input. Choose operation type (1-4): ";
+          cin >> operation;
           break;
       }
     } 
-    cout << "Do you wish to continue y/n: ";
+    std::cout << "Do you wish to continue y/n: ";
     cin >> stop;
 }while(stop!='n' && stop=='y');
 
 /********************************************************* ZADANIE 3 **********************************************************/
 /**************** POLISH DESCRIPTION: Program, który wczytuje liczbę naturalną oraz znak, a następnie znajduje. ****************/
 /**************************** liczbę jej cyfr, sumę jej cyfr lub pierwszą najbardziej znaczącą cyfrę. **************************/
-cout << "*************************************************************************************" << endl;
-cout << "Program doing stuff" << endl;
+std::cout << "*************************************************************************************" << endl;
+std::cout << "Program doing stuff" << endl;
 
 
 
