@@ -3,15 +3,31 @@
 
 using namespace std;
 
+int inputValidation(string type)
+{
+    if (type == "int" || type == "integer") 
+    {
+        int number = 0;
+        return number;
+    }
+    else if (type == "float") 
+    {
+        float number = 0;
+        return number;
+    }
+}
+
 int main()
 {
+//enum inputType {integerT, floatT, stringT};
+//inputType type = integerT; // type is being used to validate input
 /********************************************************* ZADANIE 1 **********************************************************/
 /**************** POLISH DESCRIPTION: Program, który wczytuje liczbę rzeczywistą i oblicza z niej pierwiastek. ****************/
 /********************************** Działanie powtarzane jest dopóki nie zostanie wczytane 0. *********************************/
 
 cout << "Program finding square root of a given integer number. To quit insert \'0\'." << endl;
-int number = 0;
 /************** Version with do .. while instead od while *************************
+int number = 0;
 do
 {   
     cout << "Insert number: ";
@@ -19,12 +35,12 @@ do
     cout << "The square root of " +  std::to_string(number) + " is " << sqrt(number) << endl;
 } while (number != 0);
 */
-number = 1;
+int number = 1;
 while (number != 0)
-{   
+{  
     cout << "Insert number: ";
-    cin >> number;
-    cout << "The square root of " +  std::to_string(number) + " is " << sqrt(number) << endl;
+    number = inputValidation("integer");
+    cout << "The square root of " +  std::to_string(inputValidation(number) + " is " << sqrt(inputValidation(number)) << endl;
 } 
 
 /********************************************************* ZADANIE 2 **********************************************************/
