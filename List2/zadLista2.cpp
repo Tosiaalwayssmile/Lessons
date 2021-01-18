@@ -3,11 +3,13 @@
 
 using namespace std;
 
-int inputValidation(string type)
+int inputValidation(std::string type)
 {
     if (type == "int" || type == "integer") 
     {
         int number = 0;
+        cin >> number;
+        cout << "Hi" << endl;;
         return number;
     }
     else if (type == "float") 
@@ -40,7 +42,7 @@ while (number != 0)
 {  
     cout << "Insert number: ";
     number = inputValidation("integer");
-    cout << "The square root of " +  std::to_string(inputValidation(number) + " is " << sqrt(inputValidation(number)) << endl;
+    cout << "The square root of " +  std::to_string(number) + " is " << sqrt(number) << endl;
 } 
 
 /********************************************************* ZADANIE 2 **********************************************************/
