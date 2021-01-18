@@ -50,7 +50,7 @@ std::cout << "Program finding square root of a given integer number. To quit ins
 int number = 1;
 while (number != 0)
 {  
-    std::cout << "Insert number: ";
+    std::cout << "Insert a number: ";
     number = stoi(inputValidation("integer"));
     std::cout << "The square root of " +  std::to_string(number) + " is " << sqrt(number) << endl;
 } 
@@ -64,9 +64,9 @@ int number1 = 0, number2 = 0, operation = 0;
 char stop = 'y';
 do{
     std::cout << "*************************************************************************************" << endl;
-    std::cout << "Insert first number: ";
+    std::cout << "Insert the first number: ";
     number1 = stoi(inputValidation("integer"));
-    std::cout << "Insert second number: ";
+    std::cout << "Insert the second number: ";
     number2 = stoi(inputValidation("integer"));
     std::cout << "Press \'1\' to add numbers\n"
             "Press \'2\' to subtract\n"
@@ -100,8 +100,7 @@ do{
       {
           cin.clear();  //no idea if needed
           cin.sync();
-          std::cout << "Invalid input. Choose operation type (1-4): ";
-          cin >> operation;
+          std::cout << "Invalid input." << endl;
           break;
       }
     } 
@@ -110,12 +109,44 @@ do{
 }while(stop!='n' && stop=='y');
 
 /********************************************************* ZADANIE 3 **********************************************************/
-/**************** POLISH DESCRIPTION: Program, który wczytuje liczbę naturalną oraz znak, a następnie znajduje. ****************/
-/**************************** liczbę jej cyfr, sumę jej cyfr lub pierwszą najbardziej znaczącą cyfrę. **************************/
+/**************** POLISH DESCRIPTION: Program, który wczytuje liczbę naturalną oraz znak, a następnie znajduje ****************/
+/************************ liczbę cyfr podanej liczby, sumę jej cyfr lub pierwszą najbardziej znaczącą cyfrę. ******************/
 std::cout << "*************************************************************************************" << endl;
-std::cout << "Program doing stuff" << endl;
-
-
+std::cout << "Program calculating some stuff" << endl;
+std::cout << "*************************************************************************************" << endl;
+std::cout << "Insert a natural number: ";
+string naturalNumber = (inputValidation("integer"));
+std::cout << "Press a or A to find the number of digits" 
+             "\nPress b or B to find the sum of digits"
+             "\nPress c or C to find first most siginificant digit: ";
+char userInput = 'null';
+cin >> userInput;
+switch(userInput)
+{
+    case 'a':
+    case 'A':
+    {   
+        int numberOfDigits = 0;
+        for (int i = 0; naturalNumber[i]; i < naturalNumber.size())
+        {
+          //  numberOfDigits++;
+        }
+       // cout << numberOfDigits << endl;
+        break;
+    }
+    case 'b':
+    case 'B':
+    {
+        cout << "f" << endl;
+        break;
+    }
+    case 'c':
+    case 'C':
+    {
+        cout << "f" << endl;
+        break;
+    }
+}
 
 return 0;
 }
