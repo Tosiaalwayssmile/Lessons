@@ -1,6 +1,9 @@
 #include <iostream>
+#include <string>
 #include "ex1Functions.cpp"
 #include "ex2Functions.cpp"
+#include "inputValidation.cpp"
+using namespace std;
 
 int main()
 {
@@ -34,6 +37,25 @@ int main()
                  "\nEx.2 Program multiplying variable by input-given amount." 
                  "\n**************************************************************" << std::endl;
     a = 12;
+    //std::string multiplier = "null" ;
+    std::cout << "Insert multiplier: ";
+    int multiplier = 0;
+    //multiplier = stoi(inputValidation("integer")); // check if input is valid then convert to needed type
+    cin >> multiplier;
+    cout << a << " multiplied by " << multiplier;
+    multiply(multiplier, a);
+    cout << " equals " << a << "." << std::endl;
+
+    /********************************************************* ZADANIE 3 **********************************************************/
+    /*Napisać funkcję:
+    – obliczającą silnię n! w sposób iteracyjny,
+    – obliczającą wartość symbolu Newtona – wykorzystać poprzednią funkcję,
+    – wyświetlającą trójkąt Pascala o podanej liczbie wierszy.
+    */
+    std::cout << "\n**************************************************************" 
+                 "\nEx.3 Program ." 
+                 "\n**************************************************************" << std::endl;
+
     return 0;
 }
 
