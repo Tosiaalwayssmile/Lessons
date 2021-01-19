@@ -37,11 +37,9 @@ int main()
                  "\nEx.2 Program multiplying variable by input-given amount." 
                  "\n**************************************************************" << std::endl;
     a = 12;
-    //std::string multiplier = "null" ;
     std::cout << "Insert multiplier: ";
     int multiplier = 0;
-    //multiplier = stoi(inputValidation("integer")); // check if input is valid then convert to needed type
-    cin >> multiplier;
+    multiplier = stoi(inputValidation("integer")); // check if input is valid then convert to needed type
     cout << a << " multiplied by " << multiplier;
     multiply(multiplier, a);
     cout << " equals " << a << "." << std::endl;
