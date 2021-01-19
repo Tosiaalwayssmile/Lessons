@@ -59,11 +59,15 @@ int main()
     n = stoi(inputValidation("integer"));
     std::cout << "N factorial. " << n << "! euals " << nFactorial(n) << std::endl;    
     
-    std::cout << "Insert a positive integer for k: ";
+    std::cout << "\nInsert a positive integer for k: ";
     int k = 0;      // k for Newton symbol
     k = stoi(inputValidation("integer"));
     std::cout << "Newton symbol. " << n << " choose " << k << " euals " << newtonSymbol(n,k) << std::endl;    
 
+    std::cout << "\nInsert the number of rows for Pascal triangle: ";
+    int rows = 0;      
+    rows = stoi(inputValidation("integer"));
+    std::cout << pascalTriangle(rows) << std::endl;    
 
     return 0;
 }
