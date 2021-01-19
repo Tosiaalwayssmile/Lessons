@@ -1,8 +1,19 @@
 #include <iostream>
 
-void multiply (int multiplier, int &a);    // Function for multiplying value "a" 
+int nFactorial (int n);    
 
-void multiply (int multiplier, int &a)
+int nFactorial (int n)
 {
-    a *= multiplier;
+    int nFactorial = n;
+    while(n>1)
+    {
+        nFactorial *= (n-1);
+        n--;
+    }
+    return nFactorial;
+}
+
+int newtonSymbol (int n, int k)
+{
+    return (nFactorial(n) / (nFactorial(k)* nFactorial(n-k)));
 }

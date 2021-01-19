@@ -1,9 +1,9 @@
 #include <iostream>
-#include <string>
 #include "ex1Functions.cpp"
 #include "ex2Functions.cpp"
+#include "ex3Functions.cpp"
 #include "inputValidation.cpp"
-using namespace std;
+
 
 int main()
 {
@@ -40,9 +40,9 @@ int main()
     std::cout << "Insert multiplier: ";
     int multiplier = 0;
     multiplier = stoi(inputValidation("integer")); // check if input is valid then convert to needed type
-    cout << a << " multiplied by " << multiplier;
+    std::cout << a << " multiplied by " << multiplier;
     multiply(multiplier, a);
-    cout << " equals " << a << "." << std::endl;
+    std::cout << " equals " << a << "." << std::endl;
 
     /********************************************************* ZADANIE 3 **********************************************************/
     /*Napisać funkcję:
@@ -51,8 +51,19 @@ int main()
     – wyświetlającą trójkąt Pascala o podanej liczbie wierszy.
     */
     std::cout << "\n**************************************************************" 
-                 "\nEx.3 Program ." 
+                 "\nEx.3 Program calculating n!, Newton symbol and displaying pascal triangle." 
                  "\n**************************************************************" << std::endl;
+
+    std::cout << "Insert a positive integer for n!: ";
+    int n = 0;      // n for n! or n factorial
+    n = stoi(inputValidation("integer"));
+    std::cout << "N factorial. " << n << "! euals " << nFactorial(n) << std::endl;    
+    
+    std::cout << "Insert a positive integer for k: ";
+    int k = 0;      // k for Newton symbol
+    k = stoi(inputValidation("integer"));
+    std::cout << "Newton symbol. " << n << " choose " << k << " euals " << newtonSymbol(n,k) << std::endl;    
+
 
     return 0;
 }

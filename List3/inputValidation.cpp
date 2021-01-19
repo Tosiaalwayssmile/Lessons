@@ -15,7 +15,7 @@ std::string inputValidation(std::string type)
             if (isdigit(input[0]))
             {
                 checkFlag = 1;
-                std::cout << "Noice, you entered a valid value" << std::endl;
+                //std::cout << "Noice, you entered a valid value" << std::endl;
             }
             else
             {
@@ -28,7 +28,7 @@ std::string inputValidation(std::string type)
             if (isdigit(input[0]))
             {
                 checkFlag = 1;
-                std::cout << "Good job, you entered a valid value" << std::endl;
+                //std::cout << "Good job, you entered a valid value" << std::endl;
             }
             else
             {
