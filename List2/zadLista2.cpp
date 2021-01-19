@@ -4,57 +4,7 @@
 
 //using namespace std;
 
-std::string inputValidation(std::string type)
-{
-    std::string input = "null";
-    bool checkFlag = 0;
-    while (!checkFlag)
-    {
-        std::cin >> input;
-        if (type == "int" || type == "integer") 
-        {
-            if (input.begin() == "-")
-            {
-                if (isdigit(input[1]))
-                {
-                    checkFlag = 1;
-                    std::cout << "Noice, you entered a valid value" << std::endl;
-                }
-                else
-                {
-                    std::cout << "Error. Invalid value, re-enter: ";
-                    }
-            }
-            else
-            {
-                if (isdigit(input[0]))
-                {
-                    checkFlag = 1;
-                    std::cout << "Noice, you entered a valid value" << std::endl;
-                }
-                else
-                {
-                    std::cout << "Error. Invalid value, re-enter: ";
-                    }
-            }
-        }
-        else if (type == "float") 
-        {
-            if (isdigit(input[0]))
-            {
-                checkFlag = 1;
-                std::cout << "Good job, you entered a valid value" << std::endl;
-            }
-            else
-            {
-                std::cout << "Error. Invalid value, re-enter: " << std::endl;
-            }
-        }
-        else
-            std::cout << "Error in code, check function parameter when calling function" << std::endl;
-    }
-    return input;
-}
+std::string inputValidation(std::string type);
 
 int main()
 {
@@ -130,7 +80,6 @@ int main()
 
     std::cout << "*************************************************************************************" << std::endl;
     std::cout << "Ex.3 Program calculating some stuff depending on an input" << std::endl;
-    
     do
     {
         std::cout << "*************************************************************************************" << std::endl;
@@ -164,7 +113,7 @@ int main()
             case 'c':
             case 'C':
             {
-                int msDigit = 0;
+                int msDigit = 0;            // most significant digit in a string input
                 int naturalNumberINT = stoi(naturalNumber);
                 int lastDigit = 0;
                 while (naturalNumberINT)
@@ -226,7 +175,7 @@ int main()
                     std::cout << "Insert n (natural number): ";
                     number = stoi(inputValidation("integer")); // check if input is valid then convert to needed type
                 }
-                int factorial = 1;
+                int factorial = 1;          // result of n factorial (n!)
                 int counter = number;
                 while(counter)
                 {
@@ -249,3 +198,95 @@ int main()
     std::cout << "Thanks for stopping by :)." << std::endl;
     return 0;
 }
+
+std::string inputValidation(std::string type)
+{
+    std::string input = "null";
+    bool checkFlag = 0;
+    while (!checkFlag)
+    {
+        std::cin >> input;
+        if (type == "int" || type == "integer") 
+        {
+            
+            if (isdigit(input[0]))
+            {
+                checkFlag = 1;
+                std::cout << "Noice, you entered a valid value" << std::endl;
+            }
+            else
+            {
+                std::cout << "Error. Invalid value, re-enter: ";
+                }
+
+        }
+        else if (type == "float") 
+        {
+            if (isdigit(input[0]))
+            {
+                checkFlag = 1;
+                std::cout << "Good job, you entered a valid value" << std::endl;
+            }
+            else
+            {
+                std::cout << "Error. Invalid value, re-enter: " << std::endl;
+            }
+        }
+        else
+            std::cout << "Error in code, check function parameter when calling function" << std::endl;
+    }
+    return input;
+}
+/*Not working for negative numbers 
+std::string inputValidation(std::string type)
+{
+    std::string input = "null";
+    bool checkFlag = 0;
+    while (!checkFlag)
+    {
+        std::cin >> input;
+        if (type == "int" || type == "integer") 
+        {
+            if (input.begin() == "-")
+            {
+                if (isdigit(input[1]))
+                {
+                    checkFlag = 1;
+                    std::cout << "Noice, you entered a valid value" << std::endl;
+                }
+                else
+                {
+                    std::cout << "Error. Invalid value, re-enter: ";
+                    }
+            }
+            else
+            {
+                if (isdigit(input[0]))
+                {
+                    checkFlag = 1;
+                    std::cout << "Noice, you entered a valid value" << std::endl;
+                }
+                else
+                {
+                    std::cout << "Error. Invalid value, re-enter: ";
+                    }
+            }
+        }
+        else if (type == "float") 
+        {
+            if (isdigit(input[0]))
+            {
+                checkFlag = 1;
+                std::cout << "Good job, you entered a valid value" << std::endl;
+            }
+            else
+            {
+                std::cout << "Error. Invalid value, re-enter: " << std::endl;
+            }
+        }
+        else
+            std::cout << "Error in code, check function parameter when calling function" << std::endl;
+    }
+    return input;
+}
+*/
