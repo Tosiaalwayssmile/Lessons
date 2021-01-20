@@ -43,7 +43,7 @@ int main()
     std::cout << a << " multiplied by " << multiplier;
     multiply(multiplier, a);
     std::cout << " equals " << a << "." << std::endl;
-
+    
     /********************************************************* ZADANIE 3 **********************************************************/
     /*Napisać funkcję:
     – obliczającą silnię n! w sposób iteracyjny,
@@ -62,13 +62,73 @@ int main()
     std::cout << "\nInsert a positive integer for k: ";
     int k = 0;      // k for Newton symbol
     k = stoi(inputValidation("integer"));
+    while (k > n)
+    {
+        std::cout << "\nK must be less than n. Insert a positive integer for k: ";
+        k = stoi(inputValidation("integer"));
+    }
     std::cout << "Newton symbol. " << n << " choose " << k << " euals " << newtonSymbol(n,k) << std::endl;    
 
     std::cout << "\nInsert the number of rows for Pascal triangle: ";
     int rows = 0;      
     rows = stoi(inputValidation("integer"));
-    std::cout << pascalTriangle(rows) << std::endl;    
+    pascalTriangle(rows); 
 
+    /********************************************************* ZADANIE 4 **********************************************************/
+    /*Napisać funkcję wczytującą n liczb od użytkownika i sprawdzającą czy ich suma jest parzysta
+    (osobna funkcja sprawdzająca parzystość). Jeśli tak zwraca wartość 1, jeśli nie – 0.
+    */
+    std::cout << "\n**************************************************************" 
+                 "\nEx.4 Program checking if sum of input is even" 
+                 "\n**************************************************************" << std::endl;
+
+    std::string inputString = "null";
+    if (checkParity(countInputSum(inputString)))
+    {
+        std::cout << "Sum is even" << std::endl;
+    }
+    else 
+    {
+        std::cout << "Sum is odd" << std::endl;
+    }
+    /********************************************************* ZADANIE 5 **********************************************************/
+    /*Napisać funkcję przyjmującą trzy parametry a, b, c, będące liczbami całkowitymi. Funkcja zwraca
+    wartość jeden, jeśli podane liczby są liczbami pitagorejskimi oraz zero w przeciwnym wypadku. 
+    */
+    std::cout << "\n**************************************************************" 
+                 "\nEx.5 Program checking if inserted numbers are Pythagoras numbers" 
+                 "\n**************************************************************" << std::endl;
+    a = 0;
+    b = 0;
+    int c = 0;
+    std::cout << "Insert a positive integer for a: ";
+    a = stoi(inputValidation("integer"));
+    std::cout << "Insert a positive integer for b: ";
+    b = stoi(inputValidation("integer"));
+    std::cout << "Insert a positive integer for c: ";
+    c = stoi(inputValidation("integer"));
+    if (pythagorasNumber(a,b,c))
+    {
+        std::cout << "Inserted numbers are Pythagoras numbers" << std::endl;
+    }
+    else
+    {
+        std::cout << "Inserted numbers are not Pythagoras numbers" << std::endl;
+    }
+    /********************************************************* ZADANIE 6 **********************************************************/
+    /*Napisać funkcję zwracającą największy wspólny dzielnik dwóch liczb naturalnych przekazywanych
+    przez parametr.
+    */
+    std::cout << "\n**************************************************************" 
+                 "\nEx.5 Program finding greatest common divisor of two natural numbers" 
+                 "\n**************************************************************" << std::endl;
+    a = 0;
+    b = 0;
+    std::cout << "Insert a positive integer for a: ";
+    a = stoi(inputValidation("integer"));
+    std::cout << "Insert a positive integer for b: ";
+    b = stoi(inputValidation("integer"));
+    std::cout << "Greatest common divisor of nnserted numbers is: " << greatesCommonDivisor(a,b) << std::endl;
     return 0;
 }
 

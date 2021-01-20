@@ -11,28 +11,56 @@ std::string inputValidation(std::string type)
         std::cin >> input;
         if (type == "int" || type == "integer") 
         {
-            
-            if (isdigit(input[0]))
+            if (input[0] == '-')
             {
-                checkFlag = 1;
-                //std::cout << "Noice, you entered a valid value" << std::endl;
+                if (isdigit(input[1]))
+                {
+                    checkFlag = 1;
+                    //std::cout << "Noice, you entered a valid value" << std::endl;
+                }
+                else
+                {
+                    std::cout << "Error. Invalid value, re-enter: ";
+                    }
             }
             else
             {
-                std::cout << "Error. Invalid value, re-enter: ";
+                if (isdigit(input[0]))
+                {
+                    checkFlag = 1;
+                    //std::cout << "Noice, you entered a valid value" << std::endl;
                 }
-
+                else
+                {
+                    std::cout << "Error. Invalid value, re-enter: ";
+                    }
+            }
         }
         else if (type == "float") 
         {
-            if (isdigit(input[0]))
+            if (input[0] == '-')
             {
-                checkFlag = 1;
-                //std::cout << "Good job, you entered a valid value" << std::endl;
+                if (isdigit(input[1]))
+                {
+                    checkFlag = 1;
+                    //std::cout << "Good job, you entered a valid value" << std::endl;
+                }
+                else
+                {
+                    std::cout << "Error. Invalid value, re-enter: ";
+                    }
             }
             else
             {
-                std::cout << "Error. Invalid value, re-enter: " << std::endl;
+                if (isdigit(input[0]))
+                {
+                    checkFlag = 1;
+                    //std::cout << "Noice, you entered a valid value" << std::endl;
+                }
+                else
+                {
+                    std::cout << "Error. Invalid value, re-enter: ";
+                    }
             }
         }
         else
