@@ -2,8 +2,9 @@
 #include "ex1Functions.cpp"
 #include "ex2Functions.cpp"
 #include "ex3Functions.cpp"
+#include "ex4Functions.cpp"
+#include "ex5Functions.cpp"
 #include "inputValidation.cpp"
-
 
 int main()
 {
@@ -120,7 +121,7 @@ int main()
     przez parametr.
     */
     std::cout << "\n**************************************************************" 
-                 "\nEx.5 Program finding greatest common divisor of two natural numbers" 
+                 "\nEx.6 Program finding greatest common divisor of two natural numbers" 
                  "\n**************************************************************" << std::endl;
     a = 0;
     b = 0;
@@ -128,7 +129,15 @@ int main()
     a = stoi(inputValidation("integer"));
     std::cout << "Insert a positive integer for b: ";
     b = stoi(inputValidation("integer"));
-    std::cout << "Greatest common divisor of nnserted numbers is: " << greatesCommonDivisor(a,b) << std::endl;
+    if (a < 0) 
+    {
+        a *= -1;
+    }
+    else if (b < 0)
+    {
+        b *= -1;
+    }
+    std::cout << "Greatest common divisor of inserted numbers is: " << greatesCommonDivisor(a,b) << std::endl;
     return 0;
 }
 
