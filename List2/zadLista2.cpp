@@ -17,7 +17,10 @@ int main()
     {  
         std::cout << "Insert a number: ";
         number = stoi(inputValidation("integer")); // check if input is valid then convert to needed type
-        if (number < 0) number *= -1;
+        if (number < 0) 
+        {
+            number *= -1;
+        }
         std::cout << "The square root of " +  std::to_string(number) + " is " << sqrt(number) << std::endl;
     } 
 
