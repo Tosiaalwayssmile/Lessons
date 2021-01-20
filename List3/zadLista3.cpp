@@ -138,6 +138,7 @@ int main()
         b *= -1;
     }
     std::cout << "Greatest common divisor of inserted numbers is: " << greatesCommonDivisor(a,b) << std::endl;
+    std::cout << "Thanks for stopping by :)." << std::endl;
     return 0;
 }
 

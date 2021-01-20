@@ -17,7 +17,12 @@ bool pythagorasNumber(int a,int b,int c)
 }
 int greatesCommonDivisor(int a, int b)
 {
-    int GCD = 0;
-
-    return GCD;
+    while(a != b)
+    {
+        if(a > b)
+            a -= b;
+        else
+            b -= a;
+    }
+    return a;
 }
