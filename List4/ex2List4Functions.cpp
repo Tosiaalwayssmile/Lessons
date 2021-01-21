@@ -1,14 +1,7 @@
 #include <iostream>
-#ifdef _WIN32
-#include <Windows.h>
-#else
-#include <unistd.h>
-#endif
-#include <iterator>
-#include <vector>
 
 void fillIn(int beginning, int end, int table[], int arrSize);  //table[] = *table
-void displayTable(int table[], int arrSize);
+template <typename T> void displayTable(T table[], int arrSize);
 void parityCheck(int *tableN, int *tableB, int arrSize);  //table[] = *table
 
 void fillIn(int beginning, int end, int table[], int arrSize)
@@ -16,17 +9,13 @@ void fillIn(int beginning, int end, int table[], int arrSize)
     for(int i = 0; i < arrSize; i++)
     {
         table[i] = rand() % (end - beginning + 1) + beginning;
-        //table[i] = rand() % end + beginning;
-        //std::cout <<  table[i] << " "; 
     }
     std::cout << std::endl;
 }
 
-void displayTable(int table[], int arrSize)
+template <typename T> void displayTable(T table[], int arrSize)
 {
-    //i//nt arrSize = sizeof(table)/sizeof(table[0]);
-    //std::cout <<arrSize << std::endl;
-    for (int i = 0; i < 20; i++)
+    for (int i = 0; i < arrSize; i++)
     {
         std::cout << table[i] << " ";
     }
@@ -51,7 +40,6 @@ void parityCheck(int *tableN, int *tableB, int arrSize)
         {
             tableB[j] = tableN[i];
             j++;
-
         }
     }
 }
