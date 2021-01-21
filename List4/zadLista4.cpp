@@ -25,8 +25,12 @@ int main()
     int arrSize1 = *(&B + 1) - B;
     //
     fillIn(beginning,end,N,arrSize);
-    parityCheck(N,B,arrSize);  // Does not work properly - idk why
+    std::cout << "Table N:" << std::endl;
+    displayTable(N,arrSize);
+    parityCheck(N,B,arrSize);  
+    std::cout << "Table B:" << std::endl;
     displayTable(B,arrSize);
+    std::cout << "Thanks for stopping by :)." << std::endl;
     return 0;
 }
 
