@@ -122,11 +122,11 @@ int main()
     
     if (pythagorasNumber(a, b, c))
     {
-        std::cout << "Inserted numbers are Pythagoras numbers" << std::endl;
+        std::cout << "Inserted numbers are Pythagoras numbers." << std::endl;
     }
     else
     {
-        std::cout << "Inserted numbers are not Pythagoras numbers" << std::endl;
+        std::cout << "Inserted numbers are not Pythagoras numbers." << std::endl;
     }
     
     /********************************************************* ZADANIE 6 **********************************************************/

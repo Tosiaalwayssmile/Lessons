@@ -11,7 +11,7 @@ int countInputSum()
     std::string userInput;
     int temp;
     std::cout << "Insert numbers separated by space. To fnish press enter: ";
-    std::cout << std::flush;
+    std::cin.ignore();
 
     std::getline(std::cin, userInput);
     std::istringstream inputStream(userInput);
