@@ -8,10 +8,12 @@ void pascalTriangle (int rows);
 int nFactorial (int n)
 {
     int nFactorial = 0;
+
     if (n < 0) 
     {
         n *= -1;
     }
+
     if (n == 0) 
     {
         nFactorial = 1;
@@ -20,6 +22,7 @@ int nFactorial (int n)
     else
     {
         nFactorial = n;
+        
         while(n > 1)
         {
             nFactorial *= (n - 1);

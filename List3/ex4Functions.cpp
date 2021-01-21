@@ -1,25 +1,24 @@
 #include <iostream>
+#include <sstream>
 
-int countInputSum(std::string &inputString);
+int countInputSum();
 bool checkParity(int sum); 
 std::string inputValidation1(std::string type);
 
-int countInputSum(std::string &inputString)
+int countInputSum()
 {
     int sum = 0;
-    std::cout << "Insert numbers separated by space. To fnish press enter: " << std::endl;\
-    while(std::cin.get())
+    std::string userInput;
+    int temp;
+    std::cout << "Insert numbers separated by space. To fnish press enter: ";
+    std::cout << std::flush;
+
+    std::getline(std::cin, userInput);
+    std::istringstream inputStream(userInput);
+    
+    while (inputStream >> temp)
     {
-        char optionCharacter;
-        inputString = inputValidation1("integer");
-        sum += stoi(inputString);
-        std::cin.ignore(); 
-        std::cout << "Press [enter] to see if the sum of given numbers is even: ";
-        std::cin.get(optionCharacter);
-        if (optionCharacter =='\n') // check to see if hit enter (\n)
-        {
-            break;
-        }
+        sum += temp;
     } 
     std::cout << "suma: " << sum << std::endl;
     return sum;
