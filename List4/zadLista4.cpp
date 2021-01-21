@@ -25,7 +25,7 @@ int main()
                   "\n\'3\' for seeing months with max and min income"
                   "\n\'4\' for seeing yearly average"
                   "\n\'5\' for checking how many times company made negative income and when: ";
-        int operation = 'n';    
+        int operation = 0;    
         operation = stoi(inputValidation("integer"));
         switch(operation)
         {
@@ -40,7 +40,7 @@ int main()
                 while(stopSign2 != 'n')
                 {
                     changeData(monthlyIncome);
-                    std::cout << "Do you wish to change more monthly income data y/n: ";
+                    std::cout << "Do you wish to change more monthly income data? Y/n: ";
                     std::cin >> stopSign2;
                 } 
                 break;
@@ -76,7 +76,6 @@ int main()
     2. Utworzyc tablice jednowymiarowa B, przepisujac do niej najpierw elementy nieparzyste, a nastepnie elementy parzyste tablicy N.
     3. Wyswietlic elementy tablicy na ekranie.
     */
-   
     std::cout << "Ex.2 Working with tables: random filling and checking if odd or even." << std::endl;
     int N[20], B[20];
     int beginning = 0, end = 0;

@@ -22,15 +22,14 @@ int main()
                  "\n******************************************************************************************************************************" << std::endl;
     int a = 3004, b = 69;
     std::cout << "Before changing values a = " << a << ", b = " << b << std::endl;
-    setTo0Value(a,b);
+    setTo0Value(a, b);
     std::cout << "After setting to zero by setTo0Value(a,b); a = " << a << ", b = " << b << std::endl;
-    setTo0Ref(a,b);
+    setTo0Ref(a, b);
     std::cout << "After setting to zero by etTo0Ref(a,b); a = " << a << ", b = " << b << std::endl;
     a = 3004;  // change a to previous value so both values can be changed again to 0
     std::cout << "Setting values a and b to original form. Current value of a = " << a << ", b = " << b <<  "." << std::endl;
     setTo0Ptr(&a, &b);
     std::cout << "After setting to zero bys setTo0Ptr(&a, &b); a = " << a << ", b = " << b <<  "." << std::endl;
-
     /********************************************************* ZADANIE 2 **********************************************************/
     /*Napisać funkcję bez typu (void) zwielokrotniającą n-razy wartość zmiennej przekazywanej przez referencję 
     (n – przekazywane przez argument). */
@@ -44,7 +43,6 @@ int main()
     std::cout << a << " multiplied by " << multiplier;
     multiply(multiplier, a);
     std::cout << " equals " << a << "." << std::endl;
-    
     /********************************************************* ZADANIE 3 **********************************************************/
     /*Napisać funkcję:
     – obliczającą silnię n! w sposób iteracyjny,
@@ -54,12 +52,10 @@ int main()
     std::cout << "\n**************************************************************" 
                  "\nEx.3 Program calculating n!, Newton symbol and displaying pascal triangle." 
                  "\n**************************************************************" << std::endl;
-
     std::cout << "Insert a positive integer for n!: ";
     int n = 0;      // n for n! or n factorial
     n = stoi(inputValidation("integer"));
     std::cout << "N factorial. " << n << "! euals " << nFactorial(n) << std::endl;    
-    
     std::cout << "\nInsert a positive integer for k: ";
     int k = 0;      // k for Newton symbol
     k = stoi(inputValidation("integer"));
@@ -68,21 +64,18 @@ int main()
         std::cout << "\nK must be less than n. Insert a positive integer for k: ";
         k = stoi(inputValidation("integer"));
     }
-    std::cout << "Newton symbol. " << n << " choose " << k << " euals " << newtonSymbol(n,k) << std::endl;    
-
+    std::cout << "Newton symbol. " << n << " choose " << k << " euals " << newtonSymbol(n, k) << std::endl;    
     std::cout << "\nInsert the number of rows for Pascal triangle: ";
     int rows = 0;      
     rows = stoi(inputValidation("integer"));
     pascalTriangle(rows); 
-
     /********************************************************* ZADANIE 4 **********************************************************/
     /*Napisać funkcję wczytującą n liczb od użytkownika i sprawdzającą czy ich suma jest parzysta
     (osobna funkcja sprawdzająca parzystość). Jeśli tak zwraca wartość 1, jeśli nie – 0.
     */
     std::cout << "\n**************************************************************" 
-                 "\nEx.4 Program checking if sum of input is even" 
+                 "\nEx.4 Program checking if the sum of input is even." 
                  "\n**************************************************************" << std::endl;
-
     std::string inputString = "null";
     if (checkParity(countInputSum(inputString)))
     {
@@ -97,7 +90,7 @@ int main()
     wartość jeden, jeśli podane liczby są liczbami pitagorejskimi oraz zero w przeciwnym wypadku. 
     */
     std::cout << "\n**************************************************************" 
-                 "\nEx.5 Program checking if inserted numbers are Pythagoras numbers" 
+                 "\nEx.5 Program checking if inserted numbers are Pythagoras numbers." 
                  "\n**************************************************************" << std::endl;
     a = 0;
     b = 0;
@@ -108,7 +101,7 @@ int main()
     b = stoi(inputValidation("integer"));
     std::cout << "Insert a positive integer for c: ";
     c = stoi(inputValidation("integer"));
-    if (pythagorasNumber(a,b,c))
+    if (pythagorasNumber(a, b, c))
     {
         std::cout << "Inserted numbers are Pythagoras numbers" << std::endl;
     }
@@ -138,7 +131,7 @@ int main()
         b *= -1;
     }
     std::cout << "Greatest common divisor of inserted numbers is: " << greatesCommonDivisor(a,b) << std::endl;
-    std::cout << "Thanks for stopping by :)." << std::endl;
+    std::cout << "Thanks for stopping by :)" << std::endl;
     return 0;
 }
 

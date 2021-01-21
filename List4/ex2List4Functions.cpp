@@ -25,7 +25,7 @@ template <typename T> void displayTable(T table[], int arrSize)
 void parityCheck(int *tableN, int *tableB, int arrSize)
 {
     int j = 0;
-    for (int i = 0; i < 20; i++)
+    for (int i = 0; i < arrSize; i++)
     {
         if (tableN[i] % 2 != 0)   //first copy odd numbers from tableN to tableB
         {
@@ -34,7 +34,7 @@ void parityCheck(int *tableN, int *tableB, int arrSize)
 
         }
     }
-    for (int i = 0; i < 20; i++)
+    for (int i = 0; i < arrSize; i++)
     {
         if (tableN[i] % 2 == 0)     //then copy even numbers from tableN to tableB
         {

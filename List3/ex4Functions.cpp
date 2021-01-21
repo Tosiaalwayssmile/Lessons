@@ -8,7 +8,6 @@ int countInputSum(std::string &inputString)
 {
     int sum = 0;
     std::cout << "Insert numbers separated by space. To fnish press enter: " << std::endl;\
-
     while(std::cin.get())
     {
         char optionCharacter;

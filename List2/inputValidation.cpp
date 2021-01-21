@@ -21,7 +21,7 @@ std::string inputValidation(std::string type)
                 else
                 {
                     std::cout << "Error. Invalid value, re-enter: ";
-                    }
+                }
             }
             else
             {
@@ -33,7 +33,7 @@ std::string inputValidation(std::string type)
                 else
                 {
                     std::cout << "Error. Invalid value, re-enter: ";
-                    }
+                }
             }
         }
         else if (type == "float") 
@@ -48,7 +48,7 @@ std::string inputValidation(std::string type)
                 else
                 {
                     std::cout << "Error. Invalid value, re-enter: ";
-                    }
+                }
             }
             else
             {
@@ -60,7 +60,7 @@ std::string inputValidation(std::string type)
                 else
                 {
                     std::cout << "Error. Invalid value, re-enter: ";
-                    }
+                }
             }
         }
         else

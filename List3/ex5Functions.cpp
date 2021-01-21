@@ -1,12 +1,12 @@
 #include <iostream>
 #include <cmath>
 
-bool pythagorasNumber(int a,int b,int c);
+bool pythagorasNumber(int a, int b, int c);
 int greatesCommonDivisor(int a, int b);
 
-bool pythagorasNumber(int a,int b,int c)
+bool pythagorasNumber(int a, int b, int c)
 {
-    if (pow(a,2) + pow(b,2) == pow(c,2))
+    if (pow(a, 2) + pow(b, 2) == pow(c, 2))
     {
         return true;
     }

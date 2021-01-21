@@ -4,15 +4,13 @@
 using namespace std;
 
 int main()
-{
-    
+{  
     /********************************************************* ZADANIE 1 **********************************************************/
     /******************* POLISH DESCRIPTION: Program przeliczajcy wielkość kąta wyrażoną w stopniach na radiany *******************/
     /*
         Formula for converting degrees to radians:
         n(degrees) = n*pi/180 
     */
-    
     cout << "Ex.1 Program converting angles from degrees to radians" << endl; 
     string degreeAngleString = "";
     bool notNumberBool = true;
@@ -31,11 +29,9 @@ int main()
             notNumberBool = false;
         }
     }  
-    cout << "The radian measure of given angle equals: " << degreeAngle*3.14/180 << endl << endl;
-    
+    cout << "The radian measure of given angle equals: " << degreeAngle * 3.14 / 180 << endl << endl;  
     /********************************************************* ZADANIE 2 **********************************************************/
     /********************************** POLISH DESCRIPTION: Program obliczający objętość stożka ***********************************/
-    
     cout << "Ex.2 Program finding the volume of a cone" << endl;
     float H = 0; // height of a cone
     float r = 0; // radius of a cone
@@ -43,11 +39,9 @@ int main()
     cin >> H;
     cout << "Insert the radius of a cone: ______\b\b\b\b\b\b";
     cin >> r;
-    cout << "The volume of a cone equals: " << r*r*H*3.14/3 << endl << endl;
-
+    cout << "The volume of a cone equals: " << r * r * H * 3.14 / 3 << endl << endl;
     /********************************************************* ZADANIE 3 **********************************************************/
     /** POLISH DESCRIPTION: Program obliczający średnią arytmetyczną, sumę odwrotności i sprawdzający, czy suma jest nieparzysta **/
-
     cout << "Ex.3 Count arithmetic average, reciprocal sum and check if sum is odd" << endl;
     int a = 0, b = 0, c = 0;
     string parity = "odd";
@@ -62,10 +56,8 @@ int main()
     if ((a + b + c) % 2 == 0)
         parity = "even";
     cout << "The sum is " << parity << "." << endl;
-
     /********************************************************* ZADANIE 4 **********************************************************/
     /** POLISH DESCRIPTION: Program rozwiązujący równanie kwadratowe**/
-    
     a = 0, b = 0, c = 0;
     cout << "\nEx.4 Solve quadratic equation: a^2 + bx + c = 0 or linear equation bx + c = 0" << endl;
     cout << "Insert a: ______\b\b\b\b\b\b";
@@ -87,7 +79,6 @@ int main()
         else if (delta == 0)
         {
             root1 = (-b) / (2 * a);
-           
             cout << "The double root of quadratic equation is: " << root1 << endl;
         }
         else
@@ -101,5 +92,4 @@ int main()
         cout << "The root of linear equation is: " << root0 << endl;
     }
     return 0;
-
 }

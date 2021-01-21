@@ -8,7 +8,6 @@ int main()
     /********************************************************* ZADANIE 1 **********************************************************/
     /**************** POLISH DESCRIPTION: Program, który wczytuje liczbę rzeczywistą i oblicza z niej pierwiastek. ****************/
     /********************************** Działanie powtarzane jest dopóki nie zostanie wczytane 0. *********************************/
-    
     std::cout << "*************************************************************************************" << std::endl;
     std::cout << "Ex.1 Program finding square root of a given integer number. To quit insert \'0\'." << std::endl;
     std::cout << "*************************************************************************************" << std::endl;
@@ -23,7 +22,6 @@ int main()
         }
         std::cout << "The square root of " +  std::to_string(number) + " is " << sqrt(number) << std::endl;
     } 
-
     /********************************************************* ZADANIE 2 **********************************************************/
     /**************** POLISH DESCRIPTION: Program, który wczytuje dwie liczby rzeczywiste i działanie jakie ma być na nich wykonane. ****************/
     /******************************** Wykonać odpowiednie działanie i wyświetlić jego wynik. Użyć instrukcji switch. ********************************/
@@ -38,47 +36,45 @@ int main()
         std::cout << "Insert the second number: ";
         number2 = stoi(inputValidation("integer")); // check if input is valid then convert to needed type
         std::cout << "Press \'1\' to add numbers\n"
-                "Press \'2\' to subtract\n"
-                "Press \'3\' to multiply\n" 
-                "Press \'4\' to divide" << std::endl;
+                     "Press \'2\' to subtract\n"
+                     "Press \'3\' to multiply\n" 
+                     "Press \'4\' to divide" << std::endl;
         std::cout << "Choose operation type (1-4): ";
         operation = stoi(inputValidation("integer")); // check if input is valid then convert to needed type
         switch(operation)
         {
-        case 1:
-        {
-            std::cout << "The sum of given numbers equals: " << number1 + number2 << std::endl;
-            break;
-        }
-        case 2:
-        {
-            std::cout << "The difference of given numbers equals: " << number1 - number2 << std::endl;
-            break;
-        }
-        case 3:
-        {
-            std::cout << "The multiplication of given numbers equals: " << number1 * number2 << std::endl;
-            break;
-        }
-        case 4:
-        {
-            std::cout << "The division of given numbers equals: " << (float)number1 / number2 << std::endl;
-            break;
-        }
-        default:
-        {
-            std::cout << "Invalid input." << std::endl;
-            break;
-        }
+            case 1:
+            {
+                std::cout << "The sum of given numbers equals: " << number1 + number2 << std::endl;
+                break;
+            }
+            case 2:
+            {
+                std::cout << "The difference of given numbers equals: " << number1 - number2 << std::endl;
+                break;
+            }
+            case 3:
+            {
+                std::cout << "The multiplication of given numbers equals: " << number1 * number2 << std::endl;
+                break;
+            }
+            case 4:
+            {
+                std::cout << "The division of given numbers equals: " << (float)number1 / number2 << std::endl;
+                break;
+            }
+            default:
+            {
+                std::cout << "Invalid input." << std::endl;
+                break;
+            }
         } 
         std::cout << "Do you wish to continue y/n: ";
         std::cin >> stop;
     }while(stop!='n' && stop=='y');
-
     /********************************************************* ZADANIE 3 **********************************************************/
     /**************** POLISH DESCRIPTION: Program, który wczytuje liczbę naturalną oraz znak, a następnie znajduje ****************/
     /************************ liczbę cyfr podanej liczby, sumę jej cyfr lub pierwszą najbardziej znaczącą cyfrę. ******************/
-
     std::cout << "*************************************************************************************" << std::endl;
     std::cout << "Ex.3 Program calculating some stuff depending on an input" << std::endl;
     do
@@ -119,9 +115,9 @@ int main()
                 int lastDigit = 0;
                 while (naturalNumberINT)
                 {
-                    lastDigit = naturalNumberINT%10;        //we check here from the end of the string if there is a greater digit
-                    msDigit = std::max(lastDigit,msDigit);       //if a digit is greater than lastdigit we set it as a new maximum
-                    naturalNumberINT = naturalNumberINT/10; //then we move on to check another digit on the left
+                    lastDigit = naturalNumberINT % 10;        //we check here from the end of the string if there is a greater digit
+                    msDigit = std::max(lastDigit, msDigit);       //if a digit is greater than lastdigit we set it as a new maximum
+                    naturalNumberINT = naturalNumberINT / 10; //then we move on to check another digit on the left
                 }
                 std::cout << "The most significant digit is: " << msDigit << std::endl;
                 break;
@@ -138,14 +134,13 @@ int main()
     /********************************************************* ZADANIE 4 **********************************************************/
     /**************** POLISH DESCRIPTION: Program, który wczytuje liczbę całkowitą, a następnie wykonuje ****************/
     /****************************************** na jej podstawie wybrane działanie. *************************************/
-
     std::cout << "*************************************************************************************" << std::endl;
     std::cout << "Ex.4 Program calculating some stuff depending on an input" << std::endl;
     do{
         std::cout << "*************************************************************************************" << std::endl;
         std::cout << "Press \'1\' 2^n - 2 to the power of n \n"
-                    "Press \'2\' x^n - x to the power of n \n"
-                    "Press \'3\' n! - n factorial" << std::endl;
+                     "Press \'2\' x^n - x to the power of n \n"
+                     "Press \'3\' n! - n factorial" << std::endl;
         std::cout << "Choose operation type (1-3): ";
         operation = stoi(inputValidation("integer")); // check if input is valid then convert to needed type
         int exponent = 0;
@@ -156,7 +151,7 @@ int main()
             {
                 std::cout << "Insert exponent (natural number): ";
                 exponent = stoi(inputValidation("integer")); // check if input is valid then convert to needed type
-                std::cout << "2 to the power of " << exponent << " equals " << pow(2,exponent) << std::endl;
+                std::cout << "2 to the power of " << exponent << " equals " << pow(2, exponent) << std::endl;
                 break;
             }
             case 2:
@@ -165,7 +160,7 @@ int main()
                 base = stof(inputValidation("float")); // check if input is valid then convert to needed type
                 std::cout << "Insert exponent (n - natural number): ";
                 exponent = stoi(inputValidation("integer")); // check if input is valid then convert to needed type
-                std::cout << base << " to the power of " << exponent << " equals " << pow(base,exponent) << std::endl;
+                std::cout << base << " to the power of " << exponent << " equals " << pow(base, exponent) << std::endl;
                 break;
             }
             case 3:
@@ -195,7 +190,6 @@ int main()
     std::cout << "Do you wish to continue y/n: ";
     std::cin >> stop;
     }while(stop!='n' && stop=='y');
-
-    std::cout << "Thanks for stopping by :)." << std::endl;
+    std::cout << "Thanks for stopping by :)" << std::endl;
     return 0;
 }

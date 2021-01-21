@@ -20,9 +20,9 @@ int nFactorial (int n)
     else
     {
         nFactorial = n;
-        while(n>1)
+        while(n > 1)
         {
-            nFactorial *= (n-1);
+            nFactorial *= (n - 1);
             n--;
         }  
     }
@@ -31,7 +31,7 @@ int nFactorial (int n)
 
 int newtonSymbol (int n, int k)
 {
-    return (nFactorial(n) / (nFactorial(k)* nFactorial(n-k)));
+    return (nFactorial(n) / (nFactorial(k)* nFactorial(n - k)));
 }
 
 void pascalTriangle (int rows)
@@ -39,7 +39,7 @@ void pascalTriangle (int rows)
     int value = 1;
     for(int i = 0; i < rows; i++)
     {
-        for(int space = 1; space <= rows-i; space++)   // Spaces from the left to the values, with each iterations there's
+        for(int space = 1; space <= rows - i; space++)   // Spaces from the left to the values, with each iterations there's
         {
             std::cout <<"  ";                          // less of them
         }
@@ -51,7 +51,7 @@ void pascalTriangle (int rows)
             }
             else
             {   
-                value = value *(i-j+1)/j;
+                value = value *(i - j + 1) / j;
             }
             std::cout << value << "   ";
         }
