@@ -5,7 +5,9 @@ void fillIn(int lowest, int highest, int groupPoints[], int groupSize);
 void summary(int groupPoints[], int groupSize, int summaryPoints[]);
 float average(int groupPoints[], int groupSize);
 float median(int groupPoints[], int groupSize);
+template <typename T> void displayTable(T table[], int arrSize);
 void mode(int summaryPoints[], int pointsRange);
+void histogram(int summaryPoints[], int pointsRange);
 
 void fillIn(int lowest, int highest, int groupPoints[], int groupSize)
 {
