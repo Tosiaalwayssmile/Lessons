@@ -20,7 +20,7 @@ int countInputSum()
     {
         sum += temp;
     } 
-    std::cout << "suma: " << sum << std::endl;
+    std::cout << "Sum equals: " << sum << "." << std::endl;
     return sum;
 }
 

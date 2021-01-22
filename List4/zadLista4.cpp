@@ -9,12 +9,18 @@ int main()
     /* Napisac program umożliwiający obliczenie na podstawie miesięcznych przychodów firmy:
     1. Jaki był wynik maksymalny, a jaki minimalny i w ktorym miesiącu.
     2. Średniego wyniku firmy.
-    3. Ile razy firma zanotowala straty i w jakich miesiacach.
-    */
+    3. Ile razy firma zanotowala straty i w jakich miesiacach. */
 
-    std::cout << "Ex.1 Analyzing yearly income of a company." << std::endl;
-    float monthlyIncome[12] = {100, 240.5, -300, 24, 30.7, 127, -56, 46.56, -17.5, 600, 236, 120.5};     // income data
-    std::string months[12] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    std::cout << "*******************************************" 
+                 "\nEx.1 Analyzing yearly income of a company."
+                 "\n*******************************************" << std::endl;
+
+    float monthlyIncome[12] = {100, 240.5, -300, 24, 30.7, 127, 
+                               -56, 46.56, -17.5, 600, 236, 120.5};     // income data
+
+    std::string months[12] = {"January", "February", "March", "April", "May", "June", 
+                              "July", "August", "September", "October", "November", "December"};
+
     int arrSize = *(&monthlyIncome + 1) - monthlyIncome;    //get array size
     char stopSign = 'y';
     char stopSign2 = 'y';
@@ -30,6 +36,7 @@ int main()
 
         int operation = 0;    
         operation = stoi(inputValidation("integer"));
+        std::cout << std::endl;
 
         switch(operation)
         {
@@ -70,7 +77,7 @@ int main()
                 break;
             }
         }
-    std::cout << "Do you wish to continue? Y/n: ";
+    std::cout << "Do you wish to choose another operation? Y/n: ";
     std::cin >> stopSign;
     std::cout << std::endl; // system clear
     }
@@ -80,8 +87,11 @@ int main()
     1. Tablice wypelnic liczbami losowymi z przedzialu podanego przez uzytkownika.
     2. Utworzyc tablice jednowymiarowa B, przepisujac do niej najpierw elementy nieparzyste, a nastepnie elementy parzyste tablicy N.
     3. Wyswietlic elementy tablicy na ekranie.*/
-
-    std::cout << "Ex.2 Working with tables: random filling and checking if odd or even." << std::endl;
+ 
+    std::cout << "**********************************************************************" 
+                 "\nEx.2 Working with tables: random filling and checking if odd or even."
+                 "\n**********************************************************************" << std::endl;
+    
     int N[20], B[20];
     int beginning = 0, end = 0;
 
@@ -106,9 +116,9 @@ int main()
     displayTable<int>(N, arrSize1);
     parityCheck(N, B, arrSize2);  
     
-    std::cout << "Table B:" << std::endl;
+    std::cout << "\nTable B:" << std::endl;
     displayTable<int>(B, arrSize2);  
-    std::cout << "Thanks for stopping by :)." << std::endl;
+    std::cout << "\nThanks for stopping by :)" << std::endl;
     return 0;
 }
 

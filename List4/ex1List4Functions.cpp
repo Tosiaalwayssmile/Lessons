@@ -10,7 +10,7 @@ void changeData(float monthlyIncome[])
     int i = 0;
     std::cout << "Insert month id for which you want to change data (1-12): ";
     std::cin >> i;
-    std::cout << "Previous income value for given month: " << monthlyIncome[i - 1] << std::endl;
+    std::cout << "Previous income value for given month: " << monthlyIncome[i - 1] << "." << std::endl;
     std::cout << "Insert new income: ";
     std::cin >> monthlyIncome[i - 1];
 }
@@ -29,8 +29,8 @@ void incomeMinMax(float monthlyIncome[], int arrSize, std::string months[])
             minID = i;
         }
     }
-    std::cout << "Max income was for month: " << months[maxID] << " and equals " << monthlyIncome[maxID] << std::endl;
-    std::cout << "Min income was for month: " << months[minID] << " and equals " << monthlyIncome[minID] << std::endl;
+    std::cout << "Max income was for month: " << months[maxID] << " and equals " << monthlyIncome[maxID] << "." << std::endl;
+    std::cout << "Min income was for month: " << months[minID] << " and equals " << monthlyIncome[minID] << "." << std::endl;
 }
 
 float average(float monthlyIncome[], int arrSize)

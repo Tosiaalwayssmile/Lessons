@@ -20,6 +20,7 @@ int main()
                  "\nEx.1 Program passing variables to functions which set them to 0." 
                  "Each function is an example of different function call method." 
                  "\n******************************************************************************************************************************" << std::endl;
+
     int a = 3004, b = 69;
     std::cout << "Before changing values a = " << a << ", b = " << b << std::endl;
 
@@ -38,28 +39,26 @@ int main()
     /*Napisać funkcję bez typu (void) zwielokrotniającą n-razy wartość zmiennej przekazywanej przez referencję 
     (n – przekazywane przez argument). */
 
-    std::cout << "\n**************************************************************" 
+    std::cout << "\n********************************************************" 
                  "\nEx.2 Program multiplying variable by input-given amount." 
-                 "\n**************************************************************" << std::endl;
+                 "\n********************************************************" << std::endl;
     a = 12;
     std::cout << "Insert multiplier: ";
     int multiplier = 0;
     multiplier = stoi(inputValidation("integer")); // check if input is valid then convert to needed type
 
-    std::cout << a << " multiplied by " << multiplier;
-    multiply(multiplier, a);
-
-    std::cout << " equals " << a << "." << std::endl;
-
+    std::cout << a << " multiplied by " << multiplier << " equals " << multiply(multiplier, a) << "." << std::endl;
+ 
     /********************************************************* ZADANIE 3 **********************************************************/
     /*Napisać funkcję:
     – obliczającą silnię n! w sposób iteracyjny,
     – obliczającą wartość symbolu Newtona – wykorzystać poprzednią funkcję,
     – wyświetlającą trójkąt Pascala o podanej liczbie wierszy. */
 
-    std::cout << "\n**************************************************************" 
+    std::cout << "\n**************************************************************************" 
                  "\nEx.3 Program calculating n!, Newton symbol and displaying pascal triangle." 
-                 "\n**************************************************************" << std::endl;
+                 "\n**************************************************************************" << std::endl;
+
     std::cout << "Insert a positive integer for n!: ";
     int n = 0;      // n for n! or n factorial
     n = stoi(inputValidation("integer"));
@@ -76,7 +75,7 @@ int main()
         k = stoi(inputValidation("integer"));
     }
 
-    std::cout << "Newton symbol. " << n << " choose " << k << " euals " << newtonSymbol(n, k) << std::endl; 
+    std::cout << "Newton symbol. " << n << " choose " << k << " euals " << newtonSymbol(n, k) << "." << std::endl; 
 
     std::cout << "\nInsert the number of rows for Pascal triangle: ";
     int rows = 0;      
@@ -87,26 +86,26 @@ int main()
     /*Napisać funkcję wczytującą n liczb od użytkownika i sprawdzającą czy ich suma jest parzysta
     (osobna funkcja sprawdzająca parzystość). Jeśli tak zwraca wartość 1, jeśli nie – 0.*/
 
-    std::cout << "\n**************************************************************" 
+    std::cout << "\n***************************************************" 
                  "\nEx.4 Program checking if the sum of input is even." 
-                 "\n**************************************************************" << std::endl;
+                 "\n***************************************************" << std::endl;
 
     if (checkParity(countInputSum()))
     {
-        std::cout << "Sum is even" << std::endl;
+        std::cout << "Sum is even." << std::endl;
     }
     else 
     {
-        std::cout << "Sum is odd" << std::endl;
+        std::cout << "Sum is odd." << std::endl;
     }
 
     /********************************************************* ZADANIE 5 **********************************************************/
     /*Napisać funkcję przyjmującą trzy parametry a, b, c, będące liczbami całkowitymi. Funkcja zwraca
     wartość jeden, jeśli podane liczby są liczbami pitagorejskimi oraz zero w przeciwnym wypadku. */
 
-    std::cout << "\n**************************************************************" 
+    std::cout << "\n*****************************************************************" 
                  "\nEx.5 Program checking if inserted numbers are Pythagoras numbers." 
-                 "\n**************************************************************" << std::endl;
+                 "\n*****************************************************************" << std::endl;
     a = 0;
     b = 0;
     int c = 0;
@@ -133,9 +132,9 @@ int main()
     /*Napisać funkcję zwracającą największy wspólny dzielnik dwóch liczb naturalnych przekazywanych
     przez parametr.*/
 
-    std::cout << "\n**************************************************************" 
-                 "\nEx.6 Program finding greatest common divisor of two natural numbers" 
-                 "\n**************************************************************" << std::endl;
+    std::cout << "\n*******************************************************************" 
+                 "\nEx.6 Program finding greatest common divisor of two natural numbers." 
+                 "\n*******************************************************************" << std::endl;
     a = 0;
     b = 0;
 
@@ -154,7 +153,7 @@ int main()
         b *= -1;
     }
     
-    std::cout << "Greatest common divisor of inserted numbers is: " << greatesCommonDivisor(a,b) << std::endl;
+    std::cout << "Greatest common divisor of inserted numbers is: " << greatesCommonDivisor(a,b) << "." << std::endl;
     std::cout << "Thanks for stopping by :)" << std::endl;
     return 0;
 }

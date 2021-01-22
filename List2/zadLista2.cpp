@@ -9,9 +9,9 @@ int main()
     /**************** POLISH DESCRIPTION: Program, który wczytuje liczbę rzeczywistą i oblicza z niej pierwiastek. ****************/
     /********************************** Działanie powtarzane jest dopóki nie zostanie wczytane 0. *********************************/
 
-    std::cout << "*************************************************************************************" << std::endl;
+    std::cout << "*******************************************************************************" << std::endl;
     std::cout << "Ex.1 Program finding square root of a given integer number. To quit insert \'0\'." << std::endl;
-    std::cout << "*************************************************************************************" << std::endl;
+    std::cout << "*******************************************************************************" << std::endl;
     int number = 1;
 
     while (number != 0)
@@ -29,13 +29,13 @@ int main()
     /**************** POLISH DESCRIPTION: Program, który wczytuje dwie liczby rzeczywiste i działanie jakie ma być na nich wykonane. ****************/
     /******************************** Wykonać odpowiednie działanie i wyświetlić jego wynik. Użyć instrukcji switch. ********************************/
 
-    std::cout << "*************************************************************************************" << std::endl;
+    std::cout << "\n**********************************************************************************" << std::endl;
     std::cout << "Ex.2 Basic calculator. First enter 2 integer numbers and then select an operation." << std::endl;
     int number1 = 0, number2 = 0, operation = 0;
     char stop = 'y';
 
     do{
-        std::cout << "*************************************************************************************" << std::endl;
+        std::cout << "**********************************************************************************" << std::endl;
         std::cout << "Insert the first number: ";
         number1 = stoi(inputValidation("integer")); // check if input is valid then convert to needed type
         std::cout << "Insert the second number: ";
@@ -52,22 +52,22 @@ int main()
         {
             case 1:
             {
-                std::cout << "The sum of given numbers equals: " << number1 + number2 << std::endl;
+                std::cout << "The sum of given numbers equals: " << number1 + number2 << "." << std::endl;
                 break;
             }
             case 2:
             {
-                std::cout << "The difference of given numbers equals: " << number1 - number2 << std::endl;
+                std::cout << "The difference of given numbers equals: " << number1 - number2 << "." << std::endl;
                 break;
             }
             case 3:
             {
-                std::cout << "The multiplication of given numbers equals: " << number1 * number2 << std::endl;
+                std::cout << "The multiplication of given numbers equals: " << number1 * number2 << "." << std::endl;
                 break;
             }
             case 4:
             {
-                std::cout << "The division of given numbers equals: " << (float)number1 / number2 << std::endl;
+                std::cout << "The division of given numbers equals: " << (float)number1 / number2 << "." << std::endl;
                 break;
             }
             default:
@@ -76,7 +76,7 @@ int main()
                 break;
             }
         } 
-        std::cout << "Do you wish to continue y/n: ";
+        std::cout << "Do you wish to continue? Y/n: ";
         std::cin >> stop;
 
     }while(stop!='n' && stop=='y');
@@ -85,12 +85,12 @@ int main()
     /**************** POLISH DESCRIPTION: Program, który wczytuje liczbę naturalną oraz znak, a następnie znajduje ****************/
     /************************ liczbę cyfr podanej liczby, sumę jej cyfr lub pierwszą najbardziej znaczącą cyfrę. ******************/
     
-    std::cout << "*************************************************************************************" << std::endl;
-    std::cout << "Ex.3 Program calculating some stuff depending on an input" << std::endl;
+    std::cout << "\n**********************************************************" << std::endl;
+    std::cout << "Ex.3 Program calculating some stuff depending on an input." << std::endl;
 
     do
     {
-        std::cout << "*************************************************************************************" << std::endl;
+        std::cout << "**********************************************************" << std::endl;
         std::cout << "Insert a natural number: ";
         std::string naturalNumber = (inputValidation("integer")); // check if input is valid then convert to needed type
         
@@ -105,7 +105,7 @@ int main()
             case 'a':
             case 'A':
             {   
-                std::cout << "Number of digits in given number equals: " << naturalNumber.size() << std::endl;
+                std::cout << "Number of digits in given number equals: " << naturalNumber.size() << "." << std::endl;
                 break;
             }
             case 'b':
@@ -117,7 +117,7 @@ int main()
                     {
                         sum += naturalNumber[i] - '0';  //Since it adds ascii value we need to subtract '0' or 32 to see the result in decimal
                     }
-                std::cout << "The sum of digits equals: " << sum << std::endl;
+                std::cout << "The sum of digits equals: " << sum << "." << std::endl;
                 break;
             }
             case 'c':
@@ -134,7 +134,7 @@ int main()
                     naturalNumberINT = naturalNumberINT / 10; //then we move on to check another digit on the left
                 }
 
-                std::cout << "The most significant digit is: " << msDigit << std::endl;
+                std::cout << "The most significant digit is: " << msDigit << "." << std::endl;
                 break;
             }
             default:
@@ -143,7 +143,7 @@ int main()
                 break;
             }
         }
-        std::cout << "Do you wish to continue y/n: ";
+        std::cout << "Do you wish to continue? Y/n: ";
         std::cin >> stop;
 
     }while(stop!='n' && stop=='y');
@@ -152,10 +152,10 @@ int main()
     /**************** POLISH DESCRIPTION: Program, który wczytuje liczbę całkowitą, a następnie wykonuje ****************/
     /****************************************** na jej podstawie wybrane działanie. *************************************/
 
-    std::cout << "*************************************************************************************" << std::endl;
-    std::cout << "Ex.4 Program calculating some stuff depending on an input" << std::endl;
+    std::cout << "\n**********************************************************" << std::endl;
+    std::cout << "Ex.4 Program calculating some stuff depending on an input." << std::endl;
     do{
-        std::cout << "*************************************************************************************" << std::endl;
+        std::cout << "**********************************************************" << std::endl;
         std::cout << "Press \'1\' 2^n - 2 to the power of n \n"
                      "Press \'2\' x^n - x to the power of n \n"
                      "Press \'3\' n! - n factorial" << std::endl;
@@ -171,7 +171,7 @@ int main()
             {
                 std::cout << "Insert exponent (natural number): ";
                 exponent = stoi(inputValidation("integer")); // check if input is valid then convert to needed type
-                std::cout << "2 to the power of " << exponent << " equals " << pow(2, exponent) << std::endl;
+                std::cout << "2 to the power of " << exponent << " equals " << pow(2, exponent) << "." << std::endl;
                 break;
             }
             case 2:
@@ -182,7 +182,7 @@ int main()
                 std::cout << "Insert exponent (n - natural number): ";
                 exponent = stoi(inputValidation("integer")); // check if input is valid then convert to needed type
 
-                std::cout << base << " to the power of " << exponent << " equals " << pow(base, exponent) << std::endl;
+                std::cout << base << " to the power of " << exponent << " equals " << pow(base, exponent) << "." << std::endl;
                 break;
             }
             case 3:
@@ -202,7 +202,7 @@ int main()
                     counter--;
                 }
 
-                std::cout << number << "!" << " equals " << factorial << std::endl;
+                std::cout << number << "!" << " equals " << factorial << "." << std::endl;
                 break;
             }
             default:
@@ -211,7 +211,7 @@ int main()
                 break;
             }
         }
-    std::cout << "Do you wish to continue y/n: ";
+    std::cout << "Do you wish to continue? Y/n: ";
     std::cin >> stop;
 
     }while(stop!='n' && stop=='y');
