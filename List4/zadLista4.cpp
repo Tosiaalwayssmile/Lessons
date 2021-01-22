@@ -118,6 +118,7 @@ int main()
     
     std::cout << "\nTable B:" << std::endl;
     displayTable<int>(B, arrSize2);  
+    
     std::cout << "\nThanks for stopping by :)" << std::endl;
     return 0;
 }

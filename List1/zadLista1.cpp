@@ -73,7 +73,8 @@ int main()
     std::cout << "The sum is " << parity << "." << std::endl;
 
     /********************************************************* ZADANIE 4 **********************************************************/
-    /************************************* POLISH DESCRIPTION: Program rozwiązujący równanie kwadratowe****************************/
+    /************************************* POLISH DESCRI
+     * lPTION: Program rozwiązujący równanie kwadratowe****************************/
 
     a = 0, b = 0, c = 0;
     std::cout << "\nEx.4 Solve quadratic equation: a^2 + bx + c = 0 or linear equation bx + c = 0." << std::endl;

@@ -140,18 +140,11 @@ int main()
 
     std::cout << "Insert a positive integer for a: ";
     a = stoi(inputValidation("integer"));
+    a = abs(a);     //Change to absolute value in case of negative input // sqrt can only be done on positive values
 
     std::cout << "Insert a positive integer for b: ";
     b = stoi(inputValidation("integer"));
-
-    if (a < 0) 
-    {
-        a *= -1;
-    }
-    else if (b < 0)
-    {
-        b *= -1;
-    }
+    b = abs(b);      //Change to absolute value in case of negative input // sqrt can only be done on positive values
     
     std::cout << "Greatest common divisor of inserted numbers is: " << greatesCommonDivisor(a,b) << "." << std::endl;
     std::cout << "Thanks for stopping by :)" << std::endl;
