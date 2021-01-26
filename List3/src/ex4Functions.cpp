@@ -1,9 +1,7 @@
+#pragma once
 #include <iostream>
 #include <sstream>
-
-int countInputSum();
-bool checkParity(int sum); 
-std::string inputValidation1(std::string type);
+#include "ex4Functions.h"
 
 int countInputSum()
 {

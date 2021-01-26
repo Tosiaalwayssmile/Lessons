@@ -1,8 +1,7 @@
+#pragma once
 #include <iostream>
 #include <cmath>
-
-bool pythagorasNumber(int a, int b, int c);
-int greatesCommonDivisor(int a, int b);
+#include "ex5Functions.h"
 
 bool pythagorasNumber(int a, int b, int c)
 {

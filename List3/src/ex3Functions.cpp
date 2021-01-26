@@ -1,9 +1,7 @@
+#pragma once
 #include <iostream>
 #include <cmath>
-
-int nFactorial (int n); 
-int newtonSymbol (int n, int k);
-void pascalTriangle (int rows);
+#include "ex3Functions.h"
 
 int nFactorial (int n)
 {
@@ -14,7 +12,7 @@ int nFactorial (int n)
         n *= -1;
     }
 
-    if (n == 0) 
+    if (n == 0 || n == 1) 
     {
         nFactorial = 1;
     }

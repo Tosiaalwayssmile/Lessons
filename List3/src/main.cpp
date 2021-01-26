@@ -1,10 +1,10 @@
 #include <iostream>
-#include "ex1Functions.cpp"
-#include "ex2Functions.cpp"
-#include "ex3Functions.cpp"
-#include "ex4Functions.cpp"
-#include "ex5Functions.cpp"
-#include "inputValidation.cpp"
+#include "/home/tosia/Desktop/gtest/include/ex1Functions.h"
+#include "/home/tosia/Desktop/gtest/include/ex2Functions.h"
+#include "/home/tosia/Desktop/gtest/include/ex3Functions.h"
+#include "/home/tosia/Desktop/gtest/include/ex4Functions.h"
+#include "/home/tosia/Desktop/gtest/include/ex5Functions.h"
+#include "/home/tosia/Desktop/gtest/include/inputValidation.h"
 
 int main()
 {
@@ -21,7 +21,7 @@ int main()
                  "Each function is an example of different function call method." 
                  "\n******************************************************************************************************************************" << std::endl;
 
-    int a = 3004, b = 69;
+    float a = 3004, b = 69;
     std::cout << "Before changing values a = " << a << ", b = " << b << std::endl;
 
     setTo0Value(a, b);
@@ -42,10 +42,10 @@ int main()
     std::cout << "\n********************************************************" 
                  "\nEx.2 Program multiplying variable by input-given amount." 
                  "\n********************************************************" << std::endl;
-    a = 12;
+    a = 12.5;
     std::cout << "Insert multiplier: ";
-    int multiplier = 0;
-    multiplier = stoi(inputValidation("integer")); // check if input is valid then convert to needed type
+    float multiplier = 0;
+    multiplier = stof(inputValidation("float")); // check if input is valid then convert to needed type
 
     std::cout << a << " multiplied by " << multiplier << " equals " << multiply(multiplier, a) << "." << std::endl;
  

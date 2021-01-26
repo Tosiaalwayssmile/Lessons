@@ -1,6 +1,6 @@
+#pragma once
 #include <iostream>
-
-std::string inputValidation(std::string type);
+#include "inputValidation.h"
 
 std::string inputValidation(std::string type)
 {

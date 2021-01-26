@@ -2,7 +2,7 @@
 #include <cmath>
 
 int main()
-{  
+{   
     /********************************************************* ZADANIE 1 **********************************************************/
     /******************* POLISH DESCRIPTION: Program przeliczajcy wielkość kąta wyrażoną w stopniach na radiany. *******************/
     /*  Formula for converting degrees to radians:
