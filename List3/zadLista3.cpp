@@ -44,7 +44,7 @@ int main()
                  "\n********************************************************" << std::endl;
     a = 12;
     std::cout << "Insert multiplier: ";
-    int multiplier = 0;
+    float multiplier = 0;
     multiplier = stoi(inputValidation("integer")); // check if input is valid then convert to needed type
 
     std::cout << a << " multiplied by " << multiplier << " equals " << multiply(multiplier, a) << "." << std::endl;
