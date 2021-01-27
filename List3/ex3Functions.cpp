@@ -9,10 +9,7 @@ int nFactorial (int n)
 {
     int nFactorial = 0;
 
-    if (n < 0) 
-    {
-        n *= -1;
-    }
+    n = abs(n);     //in case of negative input change to absolute value
 
     if (n == 0) 
     {

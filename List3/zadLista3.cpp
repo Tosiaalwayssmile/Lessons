@@ -21,7 +21,7 @@ int main()
                  "Each function is an example of different function call method." 
                  "\n******************************************************************************************************************************" << std::endl;
 
-    int a = 3004, b = 69;
+    float a = 3004, b = 69;
     std::cout << "Before changing values a = " << a << ", b = " << b << std::endl;
 
     setTo0Value(a, b);
