@@ -1,0 +1,6 @@
+To compile this project:
+1) make new folder for build files - mkdir build
+2) cmake -S . -B build
+3) go to "build" folder - cd build
+4) make
+5) ./program
