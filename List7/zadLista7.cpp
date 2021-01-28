@@ -9,7 +9,7 @@ int main()
 	{
 		exercise1();
 		exercise2();
-		std::cout << "Do you wish to repeat? Y/n: ";
+		std::cout << "\nDo you wish to repeat? Y/n: ";
 		std::cin >> userChoice;
 	}
 	return 0;
