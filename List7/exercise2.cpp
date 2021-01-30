@@ -181,26 +181,30 @@ void createMatrixC(int** matrixX, int** matrixC)
 
 void sortMatrixRow(int** matrix)
 {
+    /************************   Quick sort   ************************/
     for (int i = 0; i < rows; i++)
     {
         std::sort(matrix[i], matrix[i] + rows, std::greater<int>()); 
     }
     
-
-/*
+    /************************  Bubble sort ************************/ /*
     int temp = 0;
     for (int i = 0; i < rows; i++)
     {
-        for(int j = 0; j < columns; j++)
+        for(int j = 0; j < columns - 1; j++)
         {
-            if (matrix[i][j+1] > matrix[i][j])
+            for(int b = 0; b < columns; b++)
             {
-                temp = matrix[i][j+1];
-                matrix[i][j+1] = matrix[i][j];
-                matrix[i][j] = temp;
+                if (matrix[i][j+1] > matrix[i][j])
+                {
+                    temp = matrix[i][j+1];
+                    matrix[i][j+1] = matrix[i][j];
+                    matrix[i][j] = temp;
+                }
             }
         }
-    }*/
+    }
+    */
 }
 
 void sortMatrix(int** matrix)
