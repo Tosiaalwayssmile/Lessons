@@ -7,7 +7,7 @@
 #include "SQLHandle.h"
 #include "userRegister.h"
 
-void registerUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, bool isLoggedIn)
+void registerUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, bool& isLoggedIn)
 {
 	if (isLoggedIn == false)
 	{

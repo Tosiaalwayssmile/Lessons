@@ -34,8 +34,7 @@ void userMenu()
 			}
 			case 2:	//register
 			{
-				//registerUser(SQL_HANDLE_STMT, sqlStmtHandle, isLoggedIn);
-				//goto COMPLETED; 
+				sqlHandler(isLoggedIn, registerUser);
 				break;
 			}
 			case 3:	//change password
