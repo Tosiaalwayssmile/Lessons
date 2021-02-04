@@ -106,10 +106,6 @@ void sqlHandler(bool &isLoggedIn, void(*ExampleFunctionPointer)(unsigned int, co
 	SQLDisconnect(sqlConnHandle);
 	SQLFreeHandle(SQL_HANDLE_DBC, sqlConnHandle);
 	SQLFreeHandle(SQL_HANDLE_ENV, SQLEnvHandle);
-
-	//pause the console window - exit when key is pressed
-	//std::cout << "\nPress any key to exit...";
-	//getchar();
 }
 
 void showSQLError(unsigned int handleType, const SQLHANDLE& handle)
