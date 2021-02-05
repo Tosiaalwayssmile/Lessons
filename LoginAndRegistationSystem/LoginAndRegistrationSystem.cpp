@@ -4,15 +4,16 @@
 #include "userMenu.h"
 
 // TO DO
-// get loggedUserId without passing variable so much
 
-// feature: delete account
 
 // hashbytes - encrypt password
-// increment UserId
+// increment UserId so new users have userID +1
 
 // function for creating database (if not exists)
 //posprzatac w kodzie + dodac komentarze
+//na gicie dodaæ readme i gitignore w ka¿dym projekcie
+//zrobiæ test cpp i updateowaæ CV
+// wys³aæ je na te og³oszenia
 
 int main()
 {
