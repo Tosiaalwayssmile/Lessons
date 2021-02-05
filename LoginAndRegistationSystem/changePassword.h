@@ -1,5 +1,5 @@
-#ifndef _CHANGE_PASSWORD_cpp_
-#define _CHANGE_PASSWORD_cpp_
+#ifndef _changePassword_cpp_
+#define _changePassword_cpp_
 
 #include <windows.h>
 #include <sqlext.h>

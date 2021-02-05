@@ -15,7 +15,7 @@ void loginUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, int &log
 		SQLExecDirect(sqlStmtHandle, (SQLCHAR*)SQLQuery, SQL_NTS);
 		
 		char inputLastName[255] = "";
-		char inputFirstName[255] = "";
+		char inputPassword[255] = "";
 
 		int UserID = 0;
 		char LastName[255] = "";
@@ -24,18 +24,18 @@ void loginUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, int &log
 
 		std::cout << "\nSIGN IN" << std::endl;
 
-		std::cout << "Insert your last name : ";
+		std::cout << "Insert your last name: ";
 		std::cin >> inputLastName;
 
-		std::cout << "Insert your first name : ";
-		std::cin >> inputFirstName;
+		std::cout << "Insert your password: ";
+		std::cin >> inputPassword;
 
 		bool isInDatabase = 0;
 
 		while (SQLFetch(sqlStmtHandle) == SQL_SUCCESS)
 		{
 			// if true strcmp returns 0 so if (both strings are equal (!0 == 1)) 
-			if (!strcmp(LastName, inputLastName) && !strcmp(FirstName, inputFirstName))
+			if (!strcmp(LastName, inputLastName) && !strcmp(Password, inputPassword))
 			{
 				isInDatabase = 1;
 				break;
@@ -54,7 +54,7 @@ void loginUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, int &log
 			std::cout << "You are signed in." << std::endl;
 			sleep();
 			std::cout << "Info from database: " << "UserID: " << UserID << ", Last name: " << LastName
-				<< ", First name: " << FirstName << ", Password: " << Password << std::endl;
+				<< ", First name: " << FirstName  << std::endl; //<< ", Password: " << Password
 			loggedUserID = UserID;
 		}
 		else if (!isInDatabase)

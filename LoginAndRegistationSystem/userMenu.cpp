@@ -7,6 +7,7 @@
 #include "displayUsers.h"
 #include "SQLHandle.h"
 #include "changePassword.h"
+#include "deleteUser.h"
 
 void userMenu()
 {
@@ -47,6 +48,7 @@ void userMenu()
 			case 4:	//delete account
 			{
 				std::cout << "\nDeleting account..." << std::endl;
+				sqlHandler(loggedUserID, deleteUser);
 				break;
 			}
 			case 5: //logout

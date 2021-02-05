@@ -141,6 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="changePassword.cpp" />
+    <ClCompile Include="deleteUser.cpp" />
     <ClCompile Include="displayUsers.cpp" />
     <ClCompile Include="systemSleep.cpp" />
     <ClCompile Include="userLogin.cpp" />
@@ -153,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="changePassword.h" />
+    <ClInclude Include="deleteUser.h" />
     <ClInclude Include="displayUsers.h" />
     <ClInclude Include="systemSleep.h" />
     <ClInclude Include="userLogin.h" />
