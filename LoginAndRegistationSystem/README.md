@@ -4,6 +4,7 @@ Program connecting to SQL Server database with such features as:
 3) changing password
 4) deleting the account
 5) signing off.
+
 It allows selecting, inserting, updating and deleting data in the database.
 
 For this program to work you need to:
