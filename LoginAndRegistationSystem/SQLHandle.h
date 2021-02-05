@@ -6,10 +6,7 @@
 #include <sqltypes.h>
 #include <sql.h>
 
-//void sqlHandler();    
-//void sqlHandler(void(*ExampleFunctionPointer)(unsigned int, const SQLHANDLE&, bool&));
-
-void sqlHandler(bool& isLoggedIn, void(*ExampleFunctionPointer)(unsigned int, const SQLHANDLE&, bool&));
+void sqlHandler(int &loggedUserID, void(*ExampleFunctionPointer)(unsigned int, const SQLHANDLE&, int&));
 
 //typedef void (*ExampleFunctionPointer)(unsigned int, bool&);
 //void sqlHandler(ExampleFunctionPointer);

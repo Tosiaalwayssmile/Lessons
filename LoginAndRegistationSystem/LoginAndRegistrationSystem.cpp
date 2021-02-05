@@ -1,11 +1,11 @@
 #include <iostream>
 #include "SQLHandle.h"
-//nclude "SQLHandleRegister.h"
 #include "systemSleep.h"
 #include "userMenu.h"
 
 // TO DO
-// feature: change password????
+// get loggedUserId without passing variable so much
+
 // feature: delete account
 
 // hashbytes - encrypt password
@@ -17,8 +17,11 @@
 int main()
 {
 	std::cout << "Welcome to my login and registration system." << std::endl;
+
 	sleep();
-	//sqlHandler();
+	
+	//createTable();
+
 	userMenu();
 	return 0;
 }

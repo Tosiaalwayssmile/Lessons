@@ -9,11 +9,11 @@
 #include "userLogout.h"
 #include "systemSleep.h"
 
-void logoutUser(bool &isLoggedIn)
+void logoutUser(int &loggedUserID)
 {
 	char signOff = 'z';
 
-	if (isLoggedIn == true)
+	if (loggedUserID != 0)
 	{
 		std::cout << "\nSIGN OFF" << std::endl;
 
@@ -26,7 +26,7 @@ void logoutUser(bool &isLoggedIn)
 			{
 				case 'Y':
 				{
-					isLoggedIn = false;
+					loggedUserID = 0;
 					sleep();
 					std::cout << "\nYou successfully signed off." << std::endl;
 					break;

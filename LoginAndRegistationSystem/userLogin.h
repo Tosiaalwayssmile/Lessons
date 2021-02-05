@@ -6,7 +6,6 @@
 #include <sqltypes.h>
 #include <sql.h>
 
-void loginUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, bool& isLoggedIn);
-void function(unsigned int handleType, bool& isLoggedIn);
+void loginUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, int &loggedUserID);
 
 #endif 

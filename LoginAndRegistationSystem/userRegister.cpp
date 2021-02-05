@@ -7,9 +7,9 @@
 #include "SQLHandle.h"
 #include "userRegister.h"
 
-void registerUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, bool& isLoggedIn)
+void registerUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, int &loggedUserID)
 {
-	if (isLoggedIn == false)
+	if (!loggedUserID)
 	{
 		SQLVARCHAR inputLastName[255];
 		SQLVARCHAR inputFirstName[255];

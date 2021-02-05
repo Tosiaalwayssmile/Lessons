@@ -7,17 +7,11 @@
 #include <sql.h>
 #include "systemSleep.h"
 
-void function(unsigned int handleType, bool& isLoggedIn)
+void loginUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, int &loggedUserID)
 {
-	std::cout << "in func";
-}
-
-
-void loginUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, bool& isLoggedIn)
-{
-	if (isLoggedIn == false)
+	if (!loggedUserID)
 	{
-		char SQLQuery[] = "SELECT * FROM usersDatabase.dbo.Users"; 
+		char SQLQuery[] = "SELECT * FROM Users"; 
 		SQLExecDirect(sqlStmtHandle, (SQLCHAR*)SQLQuery, SQL_NTS);
 		
 		char inputLastName[255] = "";
@@ -60,8 +54,8 @@ void loginUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, bool& is
 			std::cout << "You are signed in." << std::endl;
 			sleep();
 			std::cout << "Info from database: " << "UserID: " << UserID << ", Last name: " << LastName
-				<< ", First name: " << FirstName << std::endl;
-			isLoggedIn = true;
+				<< ", First name: " << FirstName << ", Password: " << Password << std::endl;
+			loggedUserID = UserID;
 		}
 		else if (!isInDatabase)
 		{

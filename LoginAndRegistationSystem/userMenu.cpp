@@ -6,12 +6,13 @@
 #include "userRegister.h"
 #include "displayUsers.h"
 #include "SQLHandle.h"
+#include "changePassword.h"
 
 void userMenu()
 {
 	int userChoice = 0;
 	int repeatIndicator = 1;
-	bool isLoggedIn = false;
+	int loggedUserID = 0;
 
 	while (repeatIndicator)
 	{
@@ -29,17 +30,18 @@ void userMenu()
 		{
 			case 1:  //login
 			{
-				sqlHandler(isLoggedIn, loginUser);
+				sqlHandler(loggedUserID, loginUser);
 				break;
 			}
 			case 2:	//register
 			{
-				sqlHandler(isLoggedIn, registerUser);
+				sqlHandler(loggedUserID, registerUser);
 				break;
 			}
 			case 3:	//change password
 			{
 				std::cout << "\nChanging password..." << std::endl;
+				sqlHandler(loggedUserID, changePassword);
 				break;
 			}
 			case 4:	//delete account
@@ -49,7 +51,7 @@ void userMenu()
 			}
 			case 5: //logout
 			{
-				logoutUser(isLoggedIn);
+				logoutUser(loggedUserID);
 				break;
 			}
 			default:

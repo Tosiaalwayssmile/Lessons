@@ -15,7 +15,7 @@ void showSQLError(unsigned int handleType, const SQLHANDLE& handle);
 
 //typedef void (*ExampleFunctionPointer)(unsigned int, const SQLHANDLE&, bool&);
 
-void sqlHandler(bool &isLoggedIn, void(*ExampleFunctionPointer)(unsigned int, const SQLHANDLE&, bool&))
+void sqlHandler(int &loggedUserID, void(*ExampleFunctionPointer)(unsigned int, const SQLHANDLE&, int&))
 {
 	SQLHANDLE SQLEnvHandle = NULL;
 	SQLHANDLE sqlConnHandle = NULL;
@@ -51,7 +51,7 @@ void sqlHandler(bool &isLoggedIn, void(*ExampleFunctionPointer)(unsigned int, co
 		//SQLCHAR retConString[1024]; // Conection string
 		SQLWCHAR retconstring[SQL_RETURN_CODE_LEN];
 
-		switch (SQLDriverConnectW(sqlConnHandle, NULL, (SQLWCHAR*)L"DRIVER={SQL Server};SERVER=localhost, 1433;DATABASE=master;Trusted=true;",//UID=DESKTOP-02A9CVR\tosia;"PWD=PassWord;
+		switch (SQLDriverConnectW(sqlConnHandle, NULL, (SQLWCHAR*)L"DRIVER={SQL Server};SERVER=localhost, 1433;DATABASE=usersDatabase;Trusted=true;",//UID=DESKTOP-02A9CVR\tosia;"PWD=PassWord;
 			//(SQLWCHAR*)L"DRIVER={SQL Server};SERVER=localhost, 1433;DATABASE=master;Trusted=true;",
 			SQL_NTS, retconstring, 1024, NULL, SQL_DRIVER_NOPROMPT)) 
 		{
@@ -94,7 +94,7 @@ void sqlHandler(bool &isLoggedIn, void(*ExampleFunctionPointer)(unsigned int, co
 		//output
 		//std::cout << "\nExecuting T-SQL query..." << std::endl;
 
-		ExampleFunctionPointer(SQL_HANDLE_STMT, sqlStmtHandle, isLoggedIn);
+		ExampleFunctionPointer(SQL_HANDLE_STMT, sqlStmtHandle, loggedUserID);
 
 		goto COMPLETED;
 
