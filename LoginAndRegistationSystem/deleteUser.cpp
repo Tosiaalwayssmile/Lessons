@@ -7,12 +7,14 @@
 #include "SQLHandle.h"
 #include "userLogin.h"
 #include "deleteUser.h"
+#include "userMenu.h"
 
-void deleteUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, int& loggedUserID)
+void deleteUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, User* loggedUser)
 {
 	char deleteAccount = 'z';
 
-	if (loggedUserID != 0)
+	/* Check if user is currently logged in. */
+	if (loggedUser->isLoggedIn)
 	{
 		std::cout << "\nDELETE ACCOUNT" << std::endl;
 
@@ -27,11 +29,15 @@ void deleteUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, int& lo
 				{
 					char SQLQuery[] = "DELETE FROM usersDatabase.dbo.Users WHERE UserID = ?";
 
-					SQLBindParameter(sqlStmtHandle, 1, SQL_PARAM_INPUT, SQL_C_DEFAULT, SQL_INTEGER, 0, 0, &loggedUserID, 0, 0);
+					/* Binding parameters to a query so that the data is sent as a parameter along with the query. */
+					SQLBindParameter(sqlStmtHandle, 1, SQL_PARAM_INPUT, SQL_C_DEFAULT, SQL_INTEGER, 0, 0, &loggedUser->UserID, 0, 0);
 
+					/* Execute the delete query. */
 					SQLExecDirect(sqlStmtHandle, (SQLCHAR*)SQLQuery, SQL_NTS);
-					loggedUserID = 0;
-			
+
+					/* Change user's status to not logged in. */
+					loggedUser->isLoggedIn = 0;
+
 					break;
 				}
 				case 'N':

@@ -8,12 +8,17 @@
 #include "SQLHandle.h"
 #include "changePassword.h"
 #include "deleteUser.h"
+#include "refreshID.h"
 
 void userMenu()
 {
 	int userChoice = 0;
 	int repeatIndicator = 1;
-	int loggedUserID = 0;
+	User loggedUser;
+	loggedUser.isLoggedIn = 0;
+
+	/* Function displaying all users that are currently in database, you can uncomment this for testing. */
+	//sqlHandler(&loggedUser, displayAllUsers);
 
 	while (repeatIndicator)
 	{
@@ -31,29 +36,28 @@ void userMenu()
 		{
 			case 1:  //login
 			{
-				sqlHandler(loggedUserID, loginUser);
+				sqlHandler(&loggedUser, loginUser);
 				break;
 			}
 			case 2:	//register
 			{
-				sqlHandler(loggedUserID, registerUser);
+				sqlHandler(&loggedUser, registerUser);
+				sqlHandler(&loggedUser, refreshID);
 				break;
 			}
 			case 3:	//change password
 			{
-				std::cout << "\nChanging password..." << std::endl;
-				sqlHandler(loggedUserID, changePassword);
+				sqlHandler(&loggedUser, changePassword);
 				break;
 			}
 			case 4:	//delete account
 			{
-				std::cout << "\nDeleting account..." << std::endl;
-				sqlHandler(loggedUserID, deleteUser);
+				sqlHandler(&loggedUser, deleteUser);
 				break;
 			}
 			case 5: //logout
 			{
-				logoutUser(loggedUserID);
+				logoutUser(&loggedUser);
 				break;
 			}
 			default:

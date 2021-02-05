@@ -7,6 +7,9 @@
 #include <sqltypes.h>
 #include <sql.h>
 
-void registerUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, int &loggedUserID);
+#include "userMenu.h"
+
+/* Function checking if user is not signed in and sending his input data to database. */
+void registerUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, User* loggedUser);
 
 #endif 

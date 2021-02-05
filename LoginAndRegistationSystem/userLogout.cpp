@@ -3,17 +3,18 @@
 #include <sqlext.h>
 #include <sqltypes.h>
 #include <sql.h>
-#include <ctype.h> // toupper
+#include <ctype.h>	// toupper
 
 #include "SQLHandle.h"
 #include "userLogout.h"
 #include "systemSleep.h"
 
-void logoutUser(int &loggedUserID)
+void logoutUser(User* loggedUser)
 {
 	char signOff = 'z';
 
-	if (loggedUserID != 0)
+	/* Check if user is currently logged in. */
+	if (loggedUser->isLoggedIn)
 	{
 		std::cout << "\nSIGN OFF" << std::endl;
 
@@ -26,7 +27,7 @@ void logoutUser(int &loggedUserID)
 			{
 				case 'Y':
 				{
-					loggedUserID = 0;
+					loggedUser->isLoggedIn = 0;
 					sleep();
 					std::cout << "\nYou successfully signed off." << std::endl;
 					break;

@@ -1,26 +1,25 @@
 #include <iostream>
-#include "SQLHandle.h"
-#include "userLogin.h"
 #include <windows.h>
 #include <sqlext.h>
 #include <sqltypes.h>
 #include <sql.h>
+
 #include "systemSleep.h"
+#include "SQLHandle.h"
+#include "userLogin.h"
 
-void loginUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, int &loggedUserID)
+void loginUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, User* loggedUser)
 {
-	if (!loggedUserID)
+	/* Check if user is currently logged in. */
+	if (!loggedUser->isLoggedIn)
 	{
-		char SQLQuery[] = "SELECT * FROM Users"; 
-		SQLExecDirect(sqlStmtHandle, (SQLCHAR*)SQLQuery, SQL_NTS);
-		
-		char inputLastName[255] = "";
-		char inputPassword[255] = "";
+		char SQLQuery[] = "SELECT * FROM Users";
 
-		int UserID = 0;
-		char LastName[255] = "";
-		char FirstName[255] = "";
-		char Password[255] = "";
+		/* Execute the select query. */
+		SQLExecDirect(sqlStmtHandle, (SQLCHAR*)SQLQuery, SQL_NTS);
+
+		char inputLastName[255];
+		char inputPassword[255];
 
 		std::cout << "\nSIGN IN" << std::endl;
 
@@ -29,33 +28,37 @@ void loginUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, int &log
 
 		std::cout << "Insert your password: ";
 		std::cin >> inputPassword;
+		
+		/* Boolean flag to see if user's input matches result from database. */
+		bool isInDatabase = false;
 
-		bool isInDatabase = 0;
-
+		/* Execute the fetch query in a loop. Fetches the next rowset of data from the result. */
 		while (SQLFetch(sqlStmtHandle) == SQL_SUCCESS)
 		{
-			// if true strcmp returns 0 so if (both strings are equal (!0 == 1)) 
-			if (!strcmp(LastName, inputLastName) && !strcmp(Password, inputPassword))
+			/* Compare input char array with data from the result. If not equal move on to next rowset of data and compare again. */
+			/* Function strcmp returns 0 if both strings are equal. */
+			if (!strcmp(loggedUser->LastName, inputLastName) && !strcmp(loggedUser->Password, inputPassword))
 			{
-				isInDatabase = 1;
+				/* When the appropriate match is found break the loop. */
+				isInDatabase = true;
 				break;
 			}
-			// Fetches the next rowset of data from the result
-			SQLGetData(sqlStmtHandle, 1, SQL_C_DEFAULT, &UserID, sizeof(UserID), NULL);
-			SQLGetData(sqlStmtHandle, 2, SQL_C_DEFAULT, &LastName, sizeof(LastName), NULL);
-			SQLGetData(sqlStmtHandle, 3, SQL_C_DEFAULT, &FirstName, sizeof(FirstName), NULL);
-			SQLGetData(sqlStmtHandle, 4, SQL_C_DEFAULT, &Password, sizeof(Password), NULL);
-			// Retrieves data for a single column in the result set
-
+			/* Get the data in segment (retrieve data for a single column in the result set).  */
+			SQLGetData(sqlStmtHandle, 1, SQL_C_DEFAULT, &loggedUser->UserID, sizeof(loggedUser->UserID), NULL);
+			SQLGetData(sqlStmtHandle, 2, SQL_C_DEFAULT, loggedUser->LastName, sizeof(loggedUser->LastName), NULL);
+			SQLGetData(sqlStmtHandle, 3, SQL_C_DEFAULT, loggedUser->FirstName, sizeof(loggedUser->FirstName), NULL);
+			SQLGetData(sqlStmtHandle, 4, SQL_C_DEFAULT, loggedUser->Password, sizeof(loggedUser->Password), NULL);
 		}
 		if (isInDatabase)
 		{
 			sleep();
+			loggedUser->isLoggedIn = 1;
 			std::cout << "You are signed in." << std::endl;
 			sleep();
-			std::cout << "Info from database: " << "UserID: " << UserID << ", Last name: " << LastName
-				<< ", First name: " << FirstName  << std::endl; //<< ", Password: " << Password
-			loggedUserID = UserID;
+
+			std::cout << "Info from database: " << "UserID: " << loggedUser->UserID << ", Last name: " << loggedUser->LastName
+				<< ", First name: " << loggedUser->FirstName << std::endl;
+			
 		}
 		else if (!isInDatabase)
 		{

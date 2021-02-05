@@ -6,6 +6,9 @@
 #include <sqltypes.h>
 #include <sql.h>
 
-void displayAllUsers(unsigned int handleType, const SQLHANDLE& sqlStmtHandle);
+#include "userMenu.h"
+
+/* Function just for testing the program. It displays all users info. */
+void displayAllUsers(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, User* loggedUser);
 
 #endif 

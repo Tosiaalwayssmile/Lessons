@@ -6,7 +6,10 @@
 #include <sqltypes.h>
 #include <sql.h>
 
-typedef void (*ExampleFunctionPointer)(unsigned int, const SQLHANDLE&, int&);
-void sqlHandler(int&, ExampleFunctionPointer ex);
+#include "userMenu.h"
+
+/* Function connecting and disconnecting the database. Takes a function pointer as a parameter and is used everytime when the database is needed. */
+typedef void (*ExampleFunctionPointer)(unsigned int, const SQLHANDLE&, User*);
+void sqlHandler(User *loggedUser, ExampleFunctionPointer ex);
 
 #endif 

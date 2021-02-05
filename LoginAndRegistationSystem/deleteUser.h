@@ -6,6 +6,9 @@
 #include <sqltypes.h>
 #include <sql.h>
 
-void deleteUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, int& loggedUserID);
+#include "userMenu.h"
+
+/* Function retrieving active user info and then deleting his data in database. */
+void deleteUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, User* loggedUser);
 
 #endif 
