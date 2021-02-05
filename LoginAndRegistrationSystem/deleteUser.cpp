@@ -35,7 +35,7 @@ void deleteUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, User* l
 					/* Execute the delete query. */
 					SQLExecDirect(sqlStmtHandle, (SQLCHAR*)SQLQuery, SQL_NTS);
 
-					/* Change user's status to not logged in. */
+					/* Change user's status to 'not logged in'. */
 					loggedUser->isLoggedIn = 0;
 
 					break;

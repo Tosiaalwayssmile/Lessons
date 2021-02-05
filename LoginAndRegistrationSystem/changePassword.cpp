@@ -34,7 +34,7 @@ void changePassword(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, Use
 			std::cin >> inputPassword;
 			if (!strcmp(loggedUser->Password, inputPassword))
 			{
-				std::cout << "New password must be different than current password." << std::endl;
+				std::cout << "New password must be different than the current password." << std::endl;
 			}
 			else
 			{

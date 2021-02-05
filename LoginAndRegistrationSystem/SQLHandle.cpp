@@ -72,8 +72,7 @@ void sqlHandler(User* loggedUser, ExampleFunctionPointer myFunction)
 				break;
 			}
 		}
-
-		//if there is a problem connecting then exit application
+		/* If there is a problem connecting then exit application. */
 		if (SQL_SUCCESS != SQLAllocHandle(SQL_HANDLE_STMT, sqlConnHandle, &sqlStmtHandle))
 		{
 			goto COMPLETED;		// Allocates the statement

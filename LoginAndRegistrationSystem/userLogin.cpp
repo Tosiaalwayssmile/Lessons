@@ -47,7 +47,8 @@ void loginUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, User* lo
 			SQLGetData(sqlStmtHandle, 1, SQL_C_DEFAULT, &loggedUser->UserID, sizeof(loggedUser->UserID), NULL);
 			SQLGetData(sqlStmtHandle, 2, SQL_C_DEFAULT, loggedUser->LastName, sizeof(loggedUser->LastName), NULL);
 			SQLGetData(sqlStmtHandle, 3, SQL_C_DEFAULT, loggedUser->FirstName, sizeof(loggedUser->FirstName), NULL);
-			SQLGetData(sqlStmtHandle, 4, SQL_C_DEFAULT, loggedUser->Password, sizeof(loggedUser->Password), NULL);
+			SQLGetData(sqlStmtHandle, 4, SQL_C_DEFAULT, &loggedUser->Age, sizeof(loggedUser->Age), NULL);
+			SQLGetData(sqlStmtHandle, 5, SQL_C_DEFAULT, loggedUser->Password, sizeof(loggedUser->Password), NULL);
 		}
 		if (isInDatabase)
 		{
@@ -63,7 +64,7 @@ void loginUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, User* lo
 		else if (!isInDatabase)
 		{
 			sleep();
-			std::cout << "Wrong input. No such data." << std::endl;
+			std::cout << "No such user data in the database." << std::endl;
 		}
 	}
 	else

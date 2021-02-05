@@ -7,6 +7,7 @@ struct User
 	int UserID;
 	char LastName[255];
 	char FirstName[255];
+	int Age;
 	char Password[255];
 	bool isLoggedIn;
 };
