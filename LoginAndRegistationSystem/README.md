@@ -24,7 +24,7 @@ For this program to work you need to:
     FirstName varchar(255),
     Password varchar(255)
     );
-    INSERT INTO Users (LastName, FirstName, Password) VALUES ('ExampleLastName', 'ExampleFirstName', 'ExamplePassword');
+   INSERT INTO Users (LastName, FirstName, Age, Password) VALUES ('ExampleLastName', 'ExampleFirstName', Age, 'ExamplePassword');
 4) Enable TCP/IP Connection. See this article for reference: https://knowhow.visual-paradigm.com/hibernate/solving-sql-server-connection-problem/
 5) Allow Remote Connection
 6) Make sure Hostname and Port are correct. 52nd line in code in SQLHandle.cpp where possbile modifications may be needed: 
