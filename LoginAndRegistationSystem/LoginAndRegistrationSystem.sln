@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoginAndRegistationSystem", "LoginAndRegistationSystem.vcxproj", "{A4EFBE79-ACB2-475E-AB60-12CC56EB3692}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoginAndRegistrationSystem", "LoginAndRegistrationSystem.vcxproj", "{A4EFBE79-ACB2-475E-AB60-12CC56EB3692}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +26,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7C5EE533-E8BF-4033-B8BD-6ADD9EB7A569}
+		SolutionGuid = {2EAB625D-8994-44BF-A834-9784162F7C7C}
 	EndGlobalSection
 EndGlobal

@@ -14,7 +14,6 @@ void changePassword(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, int
 	if (loggedUserID != 0)
 	{
 		SQLVARCHAR inputPassword[255];
-		SQLVARCHAR Password[255];
 
 		char SQLQuery[] = "UPDATE usersDatabase.dbo.Users SET Password = ? WHERE UserID = ?";
 
@@ -22,8 +21,6 @@ void changePassword(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, int
 		
 		SQLBindParameter(sqlStmtHandle, 2, SQL_PARAM_INPUT, SQL_C_DEFAULT, SQL_INTEGER, 0, 0, &loggedUserID, 0, 0);
 
-	
-		//std::cout << "user " << inputUserID;
 		std::cout << "Insert password : ";
 		std::cin >> inputPassword;
 

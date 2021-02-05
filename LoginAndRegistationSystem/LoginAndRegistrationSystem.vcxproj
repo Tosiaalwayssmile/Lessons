@@ -24,6 +24,7 @@
     <ProjectGuid>{a4efbe79-acb2-475e-ab60-12cc56eb3692}</ProjectGuid>
     <RootNamespace>LoginAndRegistationSystem</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>LoginAndRegistrationSystem</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
