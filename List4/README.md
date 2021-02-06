@@ -1,5 +1,6 @@
-What I learned while doing this list is how to get the size of an array:   
-  * int arrSize = *(&arrayName + 1) - arrayName;
+What I learned while doing this list is:
+  * how to get the size of an array:   
+    int arrSize = *(&arrayName + 1) - arrayName;
   * and how to make templates for calling the function with differents type parameters
   
   /* CALLING FUNCTION */
