@@ -1,4 +1,3 @@
-//int *wsk = nullptr;
 #include <iostream>
 #include "ex1Functions.cpp"
 
