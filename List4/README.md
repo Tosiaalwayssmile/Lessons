@@ -4,10 +4,12 @@ What I learned while doing exercises from this list is:
   * and how to make templates for calling the function with differents type parameters
   
   /* CALLING FUNCTION */
+  
   displayTable<int>(arrayName, arrSize1); // calling function displayTable with passing int array
   displayTable<float>(arrayName, arrSize1); // calling function displayTable so it takes a float array as a first parameter
   
   /* DECLARATION */
+  
   template <typename T> void displayTable(T array[], int arrSize)
 {
     for (int i = 0; i < arrSize; i++)
