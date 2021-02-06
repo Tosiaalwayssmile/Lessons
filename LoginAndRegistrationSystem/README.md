@@ -11,22 +11,7 @@ It allows selecting, inserting, updating and deleting data in the database.
 For this program to work you need to:
 1. Install sql server
 2. Install Visual Studio (preferably)
-3. Create database using this script: 
-USE master; 
-GO 
-IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'usersDatabase')
-BEGIN 
-CREATE DATABASE usersDatabase; 
-END; 
-GO 
-use usersDatabase; 
-CREATE TABLE Users (
-UserID int IDENTITY(1,1) PRIMARY KEY NOT NULL, 
-LastName varchar(255) NOT NULL, 
-FirstName varchar(255) NOT NULL, 
-Age int NOT NULL,
-Password varchar(255) NOT NULL ); 
-INSERT INTO Users (LastName, FirstName, Age, Password) VALUES ('ExampleLastName', 'ExampleFirstName', Age, 'ExamplePassword');
+3. Create database using scripy "CreateDatabase.sql"
 4. Enable TCP/IP Connection. See this article for reference: https://knowhow.visual-paradigm.com/hibernate/solving-sql-server-connection-problem/
 5. Allow Remote Connection
 6. Open .sln
