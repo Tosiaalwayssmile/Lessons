@@ -29,7 +29,7 @@ Password varchar(255) NOT NULL );
 INSERT INTO Users (LastName, FirstName, Age, Password) VALUES ('ExampleLastName', 'ExampleFirstName', Age, 'ExamplePassword');
 4. Enable TCP/IP Connection. See this article for reference: https://knowhow.visual-paradigm.com/hibernate/solving-sql-server-connection-problem/
 5. Allow Remote Connection
-6. Make sure Hostname and Port are correct. 52nd line in code in SQLHandle.cpp where possbile modifications may be needed: 
+6. Make sure Hostname and Port are correct. 52nd line in code in SQLHandle.cpp is where possbile modifications may be needed: 
 
 switch (SQLDriverConnectW(sqlConnHandle, NULL, (SQLWCHAR*)L"DRIVER={SQL Server};SERVER=localhost, 1433;DATABASE=usersDatabase;Trusted=true;",SQL_NTS, retConString, 1024, NULL, SQL_DRIVER_NOPROMPT))
 
