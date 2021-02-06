@@ -19,7 +19,8 @@ What I learned while doing exercises from this list is:
     std::cout << std::endl;
 }
 
-OPIS ZADAŃ / TASK DESCRIPTION IN POLIS
+        OPIS ZADAŃ / TASK DESCRIPTION IN POLIS
+
 ZADANIE 1. Napisac program umożliwiający obliczenie na podstawie miesięcznych przychodów firmy:
 
 1. Jaki był wynik maksymalny, a jaki minimalny i w ktorym miesiącu.
