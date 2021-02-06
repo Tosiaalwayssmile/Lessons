@@ -33,5 +33,7 @@ INSERT INTO Users (LastName, FirstName, Age, Password) VALUES ('ExampleLastName'
 
 switch (SQLDriverConnectW(sqlConnHandle, NULL, (SQLWCHAR*)L"DRIVER={SQL Server};SERVER=localhost, 1433;DATABASE=usersDatabase;Trusted=true;",SQL_NTS, retConString, 1024, NULL, SQL_DRIVER_NOPROMPT))
 
-7. In project properties change the default 'Character Set' from 'Use Unicode Character Set to 'Use Multi-Byte Character Set'. 
+7. Open .sln
+
+8. In project properties change the default 'Character Set' from 'Use Unicode Character Set to 'Use Multi-Byte Character Set'. 
 In Polish: We właściwościach projektu zmień Właściwości konfiguracji -> Zaawansowane -> Zestaw znaków -> zmień 'Użyj kodowania Unicode' na 'Używaj wielobajtowego zestawu znaków'.
