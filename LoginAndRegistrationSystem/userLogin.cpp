@@ -53,7 +53,7 @@ void loginUser(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, User* lo
 		if (isInDatabase)
 		{
 			sleep();
-			loggedUser->isLoggedIn = 1;
+			loggedUser->isLoggedIn = true;
 			std::cout << "You are signed in." << std::endl;
 			sleep();
 

@@ -11,23 +11,23 @@
 
 void logoutUser(User* loggedUser)
 {
-	char signOff = 'z';
+	char userInput = 'z';
 
 	/* Check if user is currently logged in. */
 	if (loggedUser->isLoggedIn)
 	{
 		std::cout << "\nSIGN OFF" << std::endl;
 
-		while (toupper(signOff) != 'Y' && toupper(signOff) != 'N')
+		while (toupper(userInput) != 'Y' && toupper(userInput) != 'N')
 		{
 			std::cout << "Are you sure you want to sign off? Y/n: ";
-			std::cin >> signOff;
+			std::cin >> userInput;
 
-			switch (toupper(signOff))
+			switch (toupper(userInput))
 			{
 				case 'Y':
 				{
-					loggedUser->isLoggedIn = 0;
+					loggedUser->isLoggedIn = false;
 					sleep();
 					std::cout << "\nYou successfully signed off." << std::endl;
 					break;

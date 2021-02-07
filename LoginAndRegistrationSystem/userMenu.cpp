@@ -16,7 +16,7 @@ void userMenu()
 	int userChoice = 0;
 	int repeatIndicator = 1;
 	User loggedUser;
-	loggedUser.isLoggedIn = 0;
+	loggedUser.isLoggedIn = false;
 
 	/* Function displaying all users that are currently in database, you can uncomment this for testing. */
 	//sqlHandler(&loggedUser, displayAllUsers);
