@@ -3,7 +3,7 @@
      ```C++ 
      int arrSize = *(&arrayName + 1) - arrayName;
     ```
-  * and how to make templates for calling the function with differents type parameters
+  * and how to make templates for calling the function with differents type parameters:
    ```C++ 
   /* CALLING FUNCTION */
   displayTable<int>(arrayName, arrSize1); // calling function displayTable with passing int array
