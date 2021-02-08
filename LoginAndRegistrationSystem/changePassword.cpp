@@ -30,7 +30,7 @@ void changePassword(unsigned int handleType, const SQLHANDLE& sqlStmtHandle, Use
 		bool correctPassword = 0; 
 		while (!correctPassword)
 		{
-			std::cout << "Insert new password: ";
+			std::cout << "\nInsert new password: ";
 			std::cin >> inputPassword;
 			if (!strcmp(loggedUser->Password, inputPassword))
 			{
