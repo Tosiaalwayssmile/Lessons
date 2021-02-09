@@ -1,10 +1,10 @@
 Program **connecting to SQL Server databas**e with such features as:
 
-1. signing in  ```  see -> userLogin.h  ```
-2. signing up ```  see -> userRegister.h  ```
-3. changing password  ```  see -> changePassword.h  ```
-4. deleting the account ```  see -> deleteUser.h  ```
-5. signing off  ```  see -> userLogout.h  ``` 
+1. **signing in  ```  see -> userLogin.h  ```
+2. **signing up ```  see -> userRegister.h  ```
+3. **changing password  ```  see -> changePassword.h  ```
+4. **deleting the account ```  see -> deleteUser.h  ```
+5. **signing off  ```  see -> userLogout.h  ``` 
 
 It allows **selecting**, **inserting**, **updating** and **deleting** data in the database.
 
