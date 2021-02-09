@@ -1,14 +1,14 @@
-Program connecting to SQL Server database with such features as:
+Program **connecting to SQL Server databas**e with such features as:
 
-1. signing in
-2. signing up
-3. changing password
-4. deleting the account
-5. signing off. 
+1. signing in  ```  see -> userLogin.h  ```
+2. signing up ```  see -> userRegister.h  ```
+3. changing password  ```  see -> changePassword.h  ```
+4. deleting the account ```  see -> deleteUser.h  ```
+5. signing off  ```  see -> userLogout.h  ``` 
 
-It allows selecting, inserting, updating and deleting data in the database.
+It allows **selecting**, **inserting**, **updating** and **deleting** data in the database.
 
-For this program to work you need to:
+**For this program to work you need to:**
 1. Install sql server
 2. Install Visual Studio (preferably)
 3. Create database using script "CreateDatabase.sql"
